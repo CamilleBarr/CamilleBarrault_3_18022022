@@ -4,10 +4,7 @@
 
 
 body{
-    width: 90%;
-    display: flex;
-    flex-flow: wrap column;
-    margin: 20px;
+    width: 100%;
 }
 .img__header{
     font-size: 50%; //test//
@@ -75,14 +72,11 @@ main{
 .fa-store, .fa-mobile-alt, .fa-list-ul{
     color:$color-functional-icon;
 }
-
 .fa-utensils, .fa-hands-helping{
     color:white;
 }
-
-
 .fa-map-marker-alt{
-    font-size: 50%; //test//
+    font-size: 300%; //test//
 
 }
 /* fa-solid regroupe les nombres 1, 2, 3 */
