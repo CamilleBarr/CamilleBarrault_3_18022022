@@ -1,13 +1,11 @@
-@charset "UTF-8";
 /* select menu dans accueil et select plat dans menu */
-/* couleur titre menu */
-/* couleur du coeur dégradé violet bleu rose transform linear*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 body {
   width: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 .img__header {
-  font-size: 10%;
   text-align: center;
   padding: 30px 0px 0px 0px;
 }
@@ -27,29 +25,46 @@ main {
 }
 .formulaire__search {
   background-color: #e4e4e4;
-  padding: 15px 0px;
+  padding: 25px 0px;
   margin: 0px;
   border-top: solid 3px #b8b8b8;
 }
 .formulaire__logo {
-  font-size: 150%;
+  font-size: 175%;
 }
 .formulaire__heading {
   text-align: center;
+  font-weight: 500;
 }
-
-.search {
-  background-color: #e4e4e4;
-  border-style: none;
+.formulaire__heading__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 130%;
+  padding-top: 40px;
+  padding: 40px 100px 0px 100px;
 }
-
-.btn__explore {
-  padding: 15px;
+.formulaire__heading__subtitle {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 120%;
+}
+.formulaire__heading .btn__explore {
+  font-size: 175%;
+  margin: 20px;
+  padding: 20px;
   border-radius: 70px;
   border-style: none;
   box-shadow: 5px 5px 5px #e4e4e4;
   background-color: #9356DC;
   color: #ffffff;
+}
+
+.search {
+  font-size: 175%;
+  font-weight: 500;
+  background-color: #e4e4e4;
+  border-style: none;
+  margin: 0px 30px;
 }
 
 .fonctionnement {
