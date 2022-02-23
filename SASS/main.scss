@@ -49,7 +49,7 @@ main{
 
 .fonctionnement{
     background-color: #ffffff;
-    // padding: 20px;
+    padding: 20px;
 
 }
 .fct__step{
@@ -64,7 +64,7 @@ main{
     gap: 20px;
     align-items: center;
     border-style: none;
-   @extend .border-shadow-radius;
+   @include border-shadow-radius;
     background-color: #f2f2f2;
     padding: 15px 50px;
 }
@@ -95,7 +95,7 @@ main{
 .restaurant{
     width:100%;
     height:280px;
-    @extend .border-shadow-radius;
+    @include border-shadow-radius;
     margin: 15px 0px;
     position: relative;
 }
