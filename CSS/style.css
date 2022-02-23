@@ -2,15 +2,19 @@
 /* select menu dans accueil et select plat dans menu */
 /* couleur titre menu */
 /* couleur du coeur dégradé violet bleu rose transform linear*/
+.border-shadow-radius, .restaurant, .btn__fct {
+  box-shadow: 5px 5px 5px #e4e4e4;
+  border-radius: 20px;
+}
+
 body {
-  width: 90%;
-  display: flex;
-  flex-flow: wrap column;
-  margin: 20px;
+  width: 100%;
 }
 
 .img__header {
-  font-size: 50%;
+  font-size: 10%;
+  text-align: center;
+  padding: 30px 0px 0px 0px;
 }
 
 .btn__homepage {
@@ -26,12 +30,17 @@ main {
   text-align: center;
   margin: 0px 0px 20px 0px;
 }
-
 .formulaire__search {
   background-color: #e4e4e4;
   padding: 15px 0px;
   margin: 0px;
   border-top: solid 3px #b8b8b8;
+}
+.formulaire__logo {
+  font-size: 150%;
+}
+.formulaire__heading {
+  text-align: center;
 }
 
 .search {
@@ -52,7 +61,7 @@ main {
   background-color: #ffffff;
 }
 
-.step {
+.fct__step {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -63,9 +72,7 @@ main {
   display: flex;
   gap: 20px;
   align-items: center;
-  border-radius: 20px;
   border-style: none;
-  box-shadow: 5px 5px 5px #e4e4e4;
   background-color: #f2f2f2;
   padding: 15px 50px;
 }
@@ -81,10 +88,6 @@ main {
 
 .fa-utensils, .fa-hands-helping {
   color: white;
-}
-
-.fa-map-marker-alt {
-  font-size: 50%;
 }
 
 /* fa-solid regroupe les nombres 1, 2, 3 */
@@ -103,8 +106,6 @@ main {
 .restaurant {
   width: 100%;
   height: 280px;
-  box-shadow: 5px 5px 5px #e4e4e4;
-  border-radius: 20px;
   margin: 15px 0px;
   position: relative;
 }
@@ -116,13 +117,13 @@ main {
   z-index: 50%;
 }
 
-.restaurantImg {
+.restaurant__Img {
   width: 100%;
   height: 200px;
   border-radius: 20px 20px 0px 0px;
 }
 
-.restaurantHeading {
+.restaurant__Heading {
   height: 50px;
   padding: 0px 20px;
   display: flex;
@@ -151,18 +152,15 @@ p, h3 {
   color: #ffffff;
   padding: 10px 20px;
 }
-
 .f__logo {
   filter: invert(100%);
   inline-size: 30%;
 }
-
 .f__list {
   list-style-type: none;
   color: inherit;
   padding-inline-start: 0px;
 }
-
 .f__child-list {
   line-height: 4vh;
 }
