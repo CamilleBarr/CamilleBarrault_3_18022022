@@ -153,15 +153,16 @@ main{
 .presentation{   
     line-height: 5px;
 }
-p, h3{
-    //margin-block-start: 10px;
-}
+// p, h3{
+//     margin-block-start: 10px;
+// }
 .fa-heart{
     position: relative;
     width:10%;
     font-size:125%;
-    :active{
-        background-image: linear-gradient(#ff79da, #9356DC);
+    transform: transition 400ms ;
+    :clic{
+        transition: background (linear-gradient(#ff79da, #9356DC));
     }
 
 }
@@ -171,7 +172,7 @@ p, h3{
 .f{
     background-color: #242424;
     color: #ffffff;
-    //padding: 10px 20px;
+    padding: 500px 20px 50px 20px;
 
     &__logo{
         filter: invert(100%);
