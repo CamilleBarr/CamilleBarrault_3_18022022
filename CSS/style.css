@@ -29,16 +29,19 @@ main {
   font-size: 120%;
 }
 .formulaire__heading {
+  overflow: visible;
   text-align: center;
   font-weight: 500;
   padding: 25px 0px;
 }
 .formulaire__heading__title {
+  width: 100%;
   font-size: 28px;
   font-weight: 600;
   line-height: 130%;
 }
 .formulaire__heading__subtitle {
+  width: 100%;
   font-weight: 300;
   font-size: 18px;
   line-height: 120%;
@@ -82,6 +85,7 @@ main {
 }
 
 .btn__fct {
+  cursor: pointer;
   width: 100%;
   display: flex;
   gap: 20px;
@@ -94,6 +98,10 @@ main {
   font-weight: 500;
   padding: 10px 0px;
   z-index: 1;
+}
+
+.btn__fct:hover {
+  background-color: #f2eafb;
 }
 
 .fa-spinner {
@@ -159,6 +167,7 @@ main {
 
 .restaurant__Heading {
   height: 50px;
+  padding: 0px 10px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -170,15 +179,18 @@ main {
 }
 
 .fa-heart {
+  text-align: center;
   position: relative;
   width: 10%;
-  font-size: 125%;
+  height: 40px;
+  font-size: 150%;
   cursor: pointer;
-  transition: color 0ms;
-  background: linear-gradient(#ff79da, #9356DC);
+  transition: background 2000ms;
+  transform: background;
 }
-.fa-heart :active {
-  color: linear-gradient(#ff79da, #9356DC);
+
+.fa-heart:hover {
+  background: linear-gradient(#ff79da, #9356DC);
 }
 
 .i-footer {
