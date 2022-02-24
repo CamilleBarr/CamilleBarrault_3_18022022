@@ -106,14 +106,15 @@ main{
     padding-left: 30px;
 }
 .number{
-    color:#ffffff;
-    border-radius: 100%;
-    background-color: #9356DC;
-
     width: 10%;
     height: 25px;
+    padding-right: -15px;
     margin-right:-15px;
     z-index: 2; 
+    border-radius: 100%;
+    color: #ffffff;
+    background: $color-functional-icon;
+    font-weight: 500;
 }
 .restaurants{
     display:flex;
@@ -165,11 +166,12 @@ main{
     position: relative;
     width:10%;
     font-size:125%;
-    transition: background-color 400ms ;
+    cursor: pointer;
+    transition: color 0ms ;
+    background: linear-gradient(#ff79da, #9356DC) ;   
     :active{
-        background: linear-gradient(#ff79da, #9356DC);
+        color: linear-gradient(#ff79da, #9356DC);
     }
-
 }
 .i-footer{
     color:white;
