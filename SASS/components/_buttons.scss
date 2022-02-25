@@ -1,0 +1,48 @@
+.main-btn__explore{
+    font-size: 120%;
+    border-radius: 70px;
+    box-shadow: 5px 5px 5px #e4e4e4 ;
+    
+    border-style: none;        
+    background: linear-gradient(to bottom right,#ff79da, #9356DC);
+    cursor: pointer;
+    color: #ffffff;           
+    padding: 18px 15px;
+    margin: 20px 0px;
+}
+.main-btn__order{
+    font-size: 120%;
+    border-radius: 70px;
+    box-shadow: 5px 5px 5px #e4e4e4 ;
+    border-style: none;        
+    background: linear-gradient(to bottom right,#ff79da, #9356DC);
+    cursor: pointer;
+    color: #ffffff; 
+    padding: 18px 15px;
+    margin: 20px 0px; 
+}
+.btn-return{
+    &__homepage{
+        display:none}
+    &__menu{
+        font-size: 28px;
+        text-align:center ;
+    }
+}
+.btn__fct{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-style: none;
+   @include border-shadow-radius;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px 0px;
+    z-index: 1;
+}
+.btn__fct:hover{
+    background-color:lighten($color: #9356DC, $amount: 35%) ;
+}
