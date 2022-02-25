@@ -2,6 +2,7 @@
 @import "./utils/_variables.scss";
 @import "./utils/_mixin.scss";
 @import "./components/_buttons.scss";
+@import "./layout/_footer.scss"
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 
 
@@ -15,24 +16,7 @@ body{
     //padding: 30px 0px 0px 0px;
 }
 
-.f{
-    background-color: #242424;
-    color: #ffffff;
-    padding: 20px 20px 20px 20px;
 
-    &__logo{
-        filter: invert(100%);
-        inline-size: 35%;
-    }
-    &__list{
-        list-style-type: none;
-        color: inherit;
-        padding-inline-start: 0px;
-    }
-    &__child-list{
-        line-height: 4vh;
-    }
-}
 a{
     text-decoration: none;
     color: inherit;
@@ -235,10 +219,7 @@ a{
     transition: background 2000ms;
     transform: background;
 }
-.i-footer{
-    color:white;
-    padding-right: 5px;
-}
+
 
 @media all and (max-device-width: 728px){
      }     

@@ -1,0 +1,22 @@
+.f{
+    background-color: #242424;
+    color: #ffffff;
+    padding: 20px 20px 20px 20px;
+
+    &__logo{
+        filter: invert(100%);
+        inline-size: 35%;
+    }
+    &__list{
+        list-style-type: none;
+        color: inherit;
+        padding-inline-start: 0px;
+    }
+    &__child-list{
+        line-height: 4vh;
+    }
+}
+.i-footer{
+    color:white;
+    padding-right: 5px;
+}
