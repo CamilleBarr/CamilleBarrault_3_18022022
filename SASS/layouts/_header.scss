@@ -2,9 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px 0px 20px;
 }
 .img__header{
     inline-size: 150px;
     //shape-image-threshold: 5;
+}
+.bg-img{
+    height: 280px;
 }
