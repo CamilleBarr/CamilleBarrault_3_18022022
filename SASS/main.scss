@@ -24,14 +24,17 @@ a{
     &__menu{
         display: flex;
         flex-flow: column wrap;
-        gap: 10%;
+        gap: 10px;
         width: 100%;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
-        margin-top: -20px;     
+        //margin-top: -20px;     
         background-color: #f2f2f2;
         z-index: 1;
-        position: absolute;      
+        position: absolute;
+        flex-basis: 100%;
+        margin: -20px 0px 20px 0px;
+            
     }
 }
 .main__title{
@@ -92,12 +95,14 @@ a{
         font-weight: 600;
     }
     &__menu{
+        display: inline-block;
         font-family: Arial, Helvetica, sans-serif;
         text-transform: uppercase;
         font-weight: 300;
         color: darken($color: #f2f2f2f2, $amount: 70%);
         font-size: 20px;
-        text-decoration: underline $bg-color-newsflash-underline-check-menu 3px;
+        border-block-end:solid $bg-color-newsflash-underline-check-menu 3px ;
+        padding-bottom: 5px;
         display: flex;
         flex-flow: wrap row;
         gap: 20px;
@@ -139,7 +144,8 @@ a{
 .bloc__entry{
     display:flex;
     flex-flow:wrap column;
-    padding: 10px 10px;
+    flex-basis: 100%;
+    padding: 0px 10px;
 }
 .card{
     height:280px;
@@ -231,6 +237,7 @@ a{
 .price{
     text-align: center;
     position: relative;  
+    font-weight: 500;
     transition: background 2000ms;
     transform: background;
 }
