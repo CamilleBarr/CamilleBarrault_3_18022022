@@ -89,7 +89,10 @@
 }
 
 .bg-img {
-  height: 280px;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  margin-top: -20px;
 }
 
 body {
