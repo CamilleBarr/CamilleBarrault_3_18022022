@@ -60,6 +60,9 @@
   background-color: #242424;
   color: #ffffff;
   padding: 20px 20px 20px 20px;
+  position: absolute;
+  z-index: 1;
+  top: 1380px;
 }
 .f__logo {
   filter: invert(100%);
@@ -95,7 +98,6 @@
   height: 230px;
   object-fit: cover;
   margin: -20px 0px -40px 0px;
-  z-index: 2;
 }
 
 body {
@@ -113,16 +115,23 @@ a {
 }
 .main__menu {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   gap: 10px;
   width: 100%;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
   background-color: #f2f2f2;
   z-index: 1;
   position: absolute;
+  background-clip: border-box;
   flex-basis: 100%;
-  margin: -20px 0px 20px 0px;
+  margin: -15px 0px 20px 0px;
+  opacity: 1;
+  transform: opacity;
+  transition: transform 1000ms 150ms;
+}
+.main__menu :hover {
+  opacity: 0;
 }
 
 .main__title {
@@ -257,7 +266,7 @@ a {
   display: flex;
   box-shadow: 5px 5px 5px #e4e4e4;
   border-radius: 20px;
-  margin: 10px 0px;
+  margin: 5px 0px;
   background-color: #ffffff;
   flex-flow: row wrap;
   align-items: center;
@@ -267,14 +276,20 @@ a {
 }
 
 .card-title {
+  padding: 10px 0px;
   font-size: 18px;
   font-weight: 500;
-  text-overflow: clip;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  overflow: hidden;
 }
 
 .card-subtitle {
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  padding: 10px 0px;
   font-size: 15px;
-  text-overflow: clip;
+  text-overflow: hidden;
   color: #4d4d4d;
 }
 
@@ -306,7 +321,7 @@ a {
 }
 
 .presentation {
-  line-height: 5px;
+  line-height: 15px;
 }
 
 .presentation__menu {
@@ -339,6 +354,7 @@ a {
 }
 
 .fa-check-circle {
+  display: none;
   color: invert;
   background-color: #ffffff;
   transform: rotate(0°);
@@ -352,11 +368,16 @@ a {
 }
 
 .price {
+  font-size: 15px;
   text-align: center;
   position: relative;
   font-weight: 500;
   transition: background 2000ms;
   transform: background;
+}
+
+.bg-img {
+  height: 200px;
 }
 
 @media all and (min-device-width: 981px) {

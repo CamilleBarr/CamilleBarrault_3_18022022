@@ -11,10 +11,8 @@
 
 body{
     width: 100%;
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif;    
 }
-
 a{
     text-decoration: none;
     color: inherit;
@@ -23,17 +21,24 @@ a{
     background-color: #f2f2f2;
     &__menu{
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: row wrap;
         gap: 10px;
         width: 100%;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-        //margin-top: -20px;     
+        //height: 1190px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
         background-color: #f2f2f2;
         z-index: 1;
         position: absolute;
+        background-clip: border-box;
         flex-basis: 100%;
-        margin: -20px 0px 20px 0px;
+        margin: -15px 0px 20px 0px;
+        opacity: 1;
+        transform: opacity ;
+        transition: transform 1000ms 150ms;
+        :hover{
+            opacity:  0;
+        }
             
     }
 }
@@ -147,6 +152,7 @@ a{
     flex-flow:wrap column;
     flex-basis: 100%;
     padding: 0px 10px;
+    
 }
 .card{
     height:280px;
@@ -160,22 +166,29 @@ a{
     height:70px;
     display: flex;
     @include border-shadow-radius;
-    margin: 10px 0px;
+    margin: 5px 0px;
     background-color: #ffffff;
     flex-flow:row wrap;
     align-items:center;
     justify-content: space-between; 
     padding: 0px 10px;
     cursor: pointer;
+    
 }
 .card-title{
+    padding:10px 0px;
     font-size: 18px;
     font-weight: 500;
-    text-overflow: clip;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    overflow: hidden;
 }
 .card-subtitle{
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    padding: 10px 0px;
     font-size: 15px;
-    text-overflow: clip;
+    text-overflow: hidden;
     color: lighten($color: #000000, $amount: 30%);
 }
 .newsflash__new{
@@ -203,7 +216,7 @@ a{
     justify-content: space-between;        
 }
 .presentation{   
-    line-height: 5px;
+    line-height: 15px;
 }
 .presentation__menu{
     line-height: 5px;
@@ -233,6 +246,7 @@ a{
     background-color: #99E2D0;
 }
 .fa-check-circle{    
+    display:none;
     color: invert;
     background-color: #ffffff;
     transform: rotate(0°);
@@ -246,13 +260,16 @@ a{
 }
 
 .price{
+    font-size: 15px;
     text-align: center;
     position: relative;  
     font-weight: 500;
     transition: background 2000ms;
     transform: background;
 }
-
+.bg-img{
+    height: 200px;
+}
 
 @media all and (max-device-width: 728px){
      }     
