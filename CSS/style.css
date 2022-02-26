@@ -24,7 +24,6 @@
   color: #ffffff;
   padding: 15px 30px;
   margin: 40px 0px;
-  align-self: center;
 }
 
 .btn-return__homepage {
@@ -116,6 +115,7 @@ a {
 .main__menu {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   gap: 10px;
   width: 100%;
   border-top-left-radius: 50px;
