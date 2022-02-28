@@ -1,0 +1,37 @@
+.formulaire{
+    text-align: center;
+    &__search{
+    background-color: #e4e4e4;
+    padding: 15px 0px;
+    border-top: solid 3px #b8b8b8;
+    }
+    &__logo{
+        font-size: 120%; 
+    }
+    &__heading{
+        overflow: visible;
+        text-align: center;        
+        font-weight: 500;
+        padding: 25px 0px;
+        &__title{
+            width: 100%;
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 130%;
+        }
+        &__subtitle{
+            width: 100%;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 120%;
+        }              
+    }
+}
+
+.search{
+    font-size: 120%;
+    font-weight: 700;
+    background-color: #e4e4e4;
+    border-style: none;
+    margin: 0px 10px;
+}

@@ -1,0 +1,45 @@
+.bloc__fct{
+    background-color: #ffffff;
+    padding: 25px 15px 50px 15px;
+}
+.fct__step{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.i-fct{
+    color:$color-functional-icon;    
+    padding-left: 30px;
+}
+.number{
+    width: 7%;
+    height: 20px;
+    padding-top: 3px;
+    margin-right:-15px;
+    z-index: 2;
+    border-radius: 100%;
+    color: #ffffff;
+    background: $color-functional-icon;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;    
+}
+.btn__fct{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-style: none;
+   @include border-shadow-radius;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px 0px;
+    z-index: 1;
+}
+.btn__fct:hover{
+    background-color:lighten($color: #9356DC, $amount: 35%) ;
+}
