@@ -292,6 +292,96 @@ a {
   height: 200px;
 }
 
+.bloc__fct {
+  background-color: #ffffff;
+  padding: 25px 15px 50px 15px;
+}
+
+.fct__step {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.i-fct {
+  color: #9356DC;
+  padding-left: 30px;
+}
+
+.number {
+  width: 7%;
+  height: 20px;
+  padding-top: 3px;
+  margin-right: -15px;
+  z-index: 2;
+  border-radius: 100%;
+  color: #ffffff;
+  background: #9356DC;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+
+.btn__fct {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-style: none;
+  box-shadow: 5px 5px 5px #e4e4e4;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-weight: 500;
+  padding: 10px 0px;
+  z-index: 1;
+}
+
+.btn__fct:hover {
+  background-color: #f2eafb;
+}
+
+.formulaire {
+  text-align: center;
+}
+.formulaire__search {
+  background-color: #e4e4e4;
+  padding: 15px 0px;
+  border-top: solid 3px #b8b8b8;
+}
+.formulaire__logo {
+  font-size: 120%;
+}
+.formulaire__heading {
+  overflow: visible;
+  text-align: center;
+  font-weight: 500;
+  padding: 25px 0px;
+}
+.formulaire__heading__title {
+  width: 100%;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 130%;
+}
+.formulaire__heading__subtitle {
+  width: 100%;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+.search {
+  font-size: 120%;
+  font-weight: 700;
+  background-color: #e4e4e4;
+  border-style: none;
+  margin: 0px 10px;
+}
+
 @media all and (min-device-width: 981px) {
   .card {
     display: flex;
