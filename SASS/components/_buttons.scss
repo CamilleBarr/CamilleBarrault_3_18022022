@@ -1,25 +1,12 @@
 .main-btn__explore{
-    font-size: 120%;
-    border-radius: 70px;
-    box-shadow: 5px 5px 5px #e4e4e4 ;    
-    border-style: none;        
-    background: linear-gradient(to bottom right,#ff79da, #9356DC);
-    cursor: pointer;
-    color: #ffffff;           
+    @include main-button;           
     padding: 18px 15px;
     margin: 20px 0px;
 }
 .main-btn__order{
-    font-size: 120%;
-    border-radius: 70px;
-    box-shadow: 5px 5px 5px #e4e4e4 ;
-    border-style: none;        
-    background: linear-gradient(to bottom right,#ff79da, #9356DC);
-    cursor: pointer;
-    color: #ffffff; 
+    @include main-button;
     padding: 15px 30px; 
-    margin: 40px 0px;
-    
+    margin: 40px 0px;    
 }
 .btn-return{
     &__homepage{
@@ -40,7 +27,7 @@
     z-index: 1;
     position: absolute;
     margin-top: 15px;
-    margin-left: 200px;                         
+    margin-left: 280px;                         
 }
 .fa-heart::before{
     text-align: center;
