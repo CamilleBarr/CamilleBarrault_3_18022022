@@ -1,33 +1,26 @@
-.f{ 
-    width: 100%;   
+.f{
+    width: 89%;
     background-color: #242424;
     color: #ffffff;
     padding: 20px 20px 20px 20px;
-    position: absolute;
-    z-index: 1;          
-    top:2290px;
     &__logo{
         filter: invert(100%);
-        inline-size: 10rem;
+        inline-size: 50%;
     }
     &__list{
         list-style-type: none;
         color: inherit;
-        padding-inline-start: 0px;    
-        & > li{
+        padding-inline-start: 0px;
+        > li{
             line-height: 4vh;
         }
     }
-    // &__menu{
-    //     position: absolute;
-    //     z-index: 1;
-    //     top:1380px;
-    // }
 }
 .i-footer{
     color:white;
     padding-right: 10px;
     &--small{
-        font-size: 20px;
+        width: 25px;
+        height: 20px;
     }
 }

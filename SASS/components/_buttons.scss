@@ -2,11 +2,21 @@
     @include main-button;           
     padding: 18px 15px;
     margin: 20px 0px;
+    transform: scale(1);
+    transition: transform 200ms;
+    &:hover:focus{
+        transform: scale(1.15);
+    }
 }
 .main-btn__order{
     @include main-button;
     padding: 15px 30px; 
-    margin: 40px 0px;    
+    margin: 40px 0px;
+    transform: scale(1);
+    transition: transform 400ms;
+    &:hover:focus{
+        transform: scale(1.15);    
+    }
 }
 .btn-return{
     &__homepage{
@@ -19,6 +29,7 @@
     }
 }
 .newsflash__new{
+    display: flex;
     background-color: #99E2D0;
     color: darken($color:#99E2D0, $amount: 40%);
     font-weight: 500;
@@ -27,24 +38,8 @@
     z-index: 1;
     position: absolute;
     margin-top: 15px;
-    margin-left: 280px;                         
+    margin-left: 280px;                            
 }
-.fa-heart::before{
-    text-align: center;
-    position: relative;
-    width:10%;
-    height: 40px;
-    font-size:150%;clip-path: fill-box;    
-    cursor: pointer;
-           
-}
-.\f004\:active{
-    //clip-path: view-box;
-    //fill: #ff79da,#9356DC ;
-    color: transparent;
-    content:icon;            
-}
-.fa-heart{
-    
-    background-image:  linear-gradient(#ff79da, #9356DC);
-}
+.newsflash__new:nth-child(2){
+    display: none;
+} 
