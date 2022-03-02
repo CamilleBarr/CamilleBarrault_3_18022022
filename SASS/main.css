@@ -2,6 +2,47 @@
 /* select menu dans accueil et select plat dans menu */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    background-color: #ffffff;
+  }
+  80% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    background-color: #ffffff;
+  }
+  80% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 body {
   width: 100%;
   font-family: 'Roboto', sans-serif;
@@ -51,10 +92,10 @@ a {
   margin: 40px 0px;
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
 }
 
 .main-btn__order:hover:focus {
@@ -62,14 +103,14 @@ a {
           transform: scale(1.15);
 }
 
-.btn-return__homepage {
-  display: none;
-}
-
-.btn-return__menu {
+.btn-return {
   font-size: 20px;
   position: absolute;
   left: 20px;
+}
+
+.btn-return--hidden {
+  display: none;
 }
 
 .newsflash__new {
@@ -91,37 +132,39 @@ a {
   display: none;
 }
 
-.heart01 {
-  background-color: initial;
-  cursor: default;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+.heart-box {
   position: relative;
+  cursor: pointer;
 }
 
-.heart01:before {
-  content: "\f004";
-  font-family: "Font Awesome 5 Free";
-  color: #9356DC;
-  width: 25px;
-  height: 25px;
-  fill: #ff79da;
-  background: none;
-}
-
-.heart01:after {
-  opacity: 0;
-  -webkit-transition: opacity, 400ms;
-  transition: opacity, 400ms;
-}
-
-.heart01:hover {
-  width: 25px;
-  height: 25px;
-  content: "";
-  background: url(./images/heart-solid.svg);
+.empty-heart {
+  font-size: 25px;
   opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.select-heart {
+  font-size: 25px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.empty-heart:hover {
+  opacity: 0;
+}
+
+.empty-heart:hover + .select-heart, .empty-heart:hover .select-heart:hover {
+  display: block;
+  -webkit-animation: heart 1s forwards;
+          animation: heart 1s forwards;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356DC));
+  background-image: linear-gradient(#ff79da, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .f {
@@ -183,6 +226,45 @@ a {
      object-fit: cover;
   margin: -20px 0px -40px 0px;
   /* z-index: 2; */
+}
+
+.spin {
+  background-color: #ffffff;
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  font-size: 100px;
+  -webkit-transition-property: background-color 32s;
+  transition-property: background-color 32s;
+}
+
+.spin:hover {
+  background-color: transparent;
+  display: none;
+}
+
+.fa-spinner {
+  background-color: transparent;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  position: absolute;
+  -webkit-animation: spin 3000ms 0ms ease-in-out;
+          animation: spin 3000ms 0ms ease-in-out;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fa-spinner::-webkit-backdrop {
+  color: #9356DC;
+}
+
+.fa-spinner::backdrop {
+  color: #9356DC;
 }
 
 .main {
@@ -266,12 +348,6 @@ a {
           flex-flow: wrap row;
   gap: 20px;
   margin: 5px;
-}
-
-.fa-spinner {
-  color: #9356DC;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
 }
 
 .bloc__restaurant {

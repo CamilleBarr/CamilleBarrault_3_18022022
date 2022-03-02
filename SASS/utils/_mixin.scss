@@ -12,3 +12,20 @@
     cursor: pointer;
     color: #ffffff; 
 }
+@keyframes spin{    
+    0% {
+        transform: rotateX(0deg);
+        background-color: #ffffff;
+    }
+    80%{
+        transform: rotateX(360deg);
+    }
+}
+@keyframes heart{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:100%;
+    }
+}

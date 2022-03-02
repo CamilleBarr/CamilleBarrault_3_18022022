@@ -19,9 +19,12 @@
             <link rel="stylesheet" href="./CSS/normalize.css"> 
         </head>
         <body>
+            <div class="spin spin--hidden">
+            <span class="fas fa-spinner spin--hidden"></span>
+            </div>
             <header >
                 <a class="h" href="./ohmyfood_homepage.html">
-                    <span class="fas fa-arrow-left btn-return__menu">                    
+                    <span class="fas fa-arrow-left btn-return">                    
                     </span>
                     <p >                 
                         <img class="img__header" src="./images/logo/ohmyfood.png" alt="companylogo"/>
@@ -34,7 +37,10 @@
             <main class="main__menu">
                 <div class="main__title">               
                     <h1>A la française</h1>
-                    <span class="far fa-heart"></span>
+                    <div class="heart-box">
+                        <span  href="#" class="far fa-heart empty-heart"></span>
+                        <span  href="#" class="fas fa-heart select-heart"></span>
+                    </div>
                 </div> 
                 <section class="bloc__menu">
                     <h2 class="section-title__menu">Entrées</h2>

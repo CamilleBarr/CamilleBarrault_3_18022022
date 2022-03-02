@@ -1,86 +1,27 @@
-// .fa-heart{
-//     text-align: center;
-//     position: relative;
-//     width:10%;
-//     height: 40px;
-//     font-size:150%;clip-path: fill-box;    
-//     cursor: pointer;
-           
-// }
-// .fa-heart {
-//     font-size: 25px;
-//     cursor: pointer;
-//     &:disabled{    
-//     fill: url(./images/heart-solid.svg);
-//     //fill: #ff79da,#9356DC;
-    
-//     transform: scale(1);
-//     transition: transform 2000s;
-//     }    
-//     &:hover &:focus {
-//         transform: scale(1.5);    
-//     }
-//     &:enabled{
-//         background:linear-gradient(#ff79da, #9356DC);
-//     }
-// }
-// .span {
-//     text-decoration: none;
-//     color: #000000;
-//   }
-//   .span:before {
-//     font-family: "Font Awesome 5 Free";
-//     content: "\f004";
-//     display: inline-block;
-//     padding-right: 3px;
-//     vertical-align: middle;
-//     font-weight: 100;
-//     transition: opacity 400ms;
-//     background: linear-gradient (0deg #ff79da, #9356DC);
-//     opacity: 0;
-//     cursor: pointer;
-//     &:hover {
-//         opacity:1;    
-//         }
-//   }
-
-//   .heart{
-//     position: relative;
-//     cursor: pointer;
-    
-//     width: 25px;
-//     height: 25px;
-//     outline-color: transparent;
-//     :checked {
-//         background: linear-gradient (0deg #ff79da, #9356DC);
-//     }
-       
-    
-// }
-.heart01 {
-    background-color: initial;
-    cursor: default;
-    appearance: none;
+.heart-box{
     position: relative;
-    &:before{
-        content: "\f004";
-        font-family: "Font Awesome 5 Free";
-        color: #9356DC;
-        width:25px;
-        height: 25px;
-        fill: #ff79da;
-        background:none;
-        
-    }
-    &:after{
-        opacity: 0;
-        transition: opacity, 400ms;
-    }
-    &:hover{
-        width:25px;
-        height: 25px;
-        content: "";
-        background: url(./images/heart-solid.svg);
-        opacity: 1;
+    cursor: pointer;
+}
+.empty-heart{
+    font-size: 25px;
+    opacity: 1;
+    transition: opacity 1s;   
+}
+.select-heart{
+    font-size: 25px;
+    display:none;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+.empty-heart:hover{
+    opacity: 0; 
+    + .select-heart, .select-heart:hover{
+        display: block;
+        animation: heart 1s forwards;
+        background-image:linear-gradient(#ff79da, #9356DC);   
+        background-clip: text; 
+        -webkit-background-clip: text;
+        color: transparent;
     }
 }
