@@ -1,0 +1,32 @@
+@keyframes spin{    
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+        font-size: 80px;     }
+
+    100%{
+        transform: rotate(360deg);
+        opacity: 0;
+        font-size: 100px; 
+    }
+}
+@keyframes bg-spin{
+    0%, 80% {
+        display: block;
+        background-color: #ffffff;
+        z-index: 13;
+    }
+    100%{
+        display: none;
+        background-color: transparent;
+        z-index: -1;
+    }
+}
+@keyframes heart{
+    0%{
+        opacity:0;        
+    }
+    100%{
+        opacity:100%;
+    }
+}

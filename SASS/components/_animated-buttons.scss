@@ -1,0 +1,54 @@
+.heart-box{
+    position: relative;
+    cursor: pointer;
+}
+.empty-heart{
+    font-size: 25px;
+    opacity: 1;
+    transition: opacity 1s;   
+}
+.select-heart{
+    font-size: 25px;
+    display:none;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+.empty-heart:hover{
+    opacity: 0; 
+    + .select-heart, .select-heart:hover{
+        display: block;
+        animation: heart 1s forwards;
+        background-image:linear-gradient(#ff79da, #9356DC);   
+        background-clip: text; 
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    + .select-heart, .select-heart:active{
+        display: block;
+        animation: heart 1s forwards infinite;
+        background-image:linear-gradient(#ff79da, #9356DC);   
+        background-clip: text; 
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+.spin{  
+    position: fixed;
+    width: 100%;
+    height: 100%;   
+    animation: bg-spin 8s;
+}
+.fa-spinner{
+    background-color: transparent;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    position: absolute;
+    animation: spin 3s  backwards;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-iteration-count: 3;
+    background-image:linear-gradient(#ff79da, #9356DC);   
+    background-clip: text; 
+    -webkit-background-clip: text;
+    color: transparent;    
+}

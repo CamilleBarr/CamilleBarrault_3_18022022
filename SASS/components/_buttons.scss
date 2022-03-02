@@ -4,7 +4,10 @@
     margin: 20px 0px;
     transform: scale(1);
     transition: transform 200ms;
-    &:hover:focus{
+    &:hover{
+        transform: scale(1.15);
+    }
+    &:focus{
         transform: scale(1.15);
     }
 }
@@ -14,7 +17,7 @@
     margin: 40px 0px;
     transform: scale(1);
     transition: transform 200ms;
-    &:hover:focus{
+    &:hover :focus{
         transform: scale(1.15);    
     }
 }
@@ -36,7 +39,7 @@
     z-index: 1;
     position: absolute;
     margin-top: 15px;
-    margin-left: 280px;                            
+    margin-left: 200px;                            
 }
 .newsflash__new:nth-child(2){
     display: none;

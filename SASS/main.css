@@ -2,47 +2,6 @@
 /* select menu dans accueil et select plat dans menu */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    background-color: #ffffff;
-  }
-  80% {
-    -webkit-transform: rotateX(360deg);
-            transform: rotateX(360deg);
-  }
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    background-color: #ffffff;
-  }
-  80% {
-    -webkit-transform: rotateX(360deg);
-            transform: rotateX(360deg);
-  }
-}
-
-@-webkit-keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-@keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
 body {
   width: 100%;
   font-family: 'Roboto', sans-serif;
@@ -229,21 +188,13 @@ a {
 }
 
 .spin {
-  background-color: #ffffff;
   z-index: 3;
   position: fixed;
   width: 100%;
   height: 100%;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
   font-size: 100px;
-  -webkit-transition-property: background-color 32s;
-  transition-property: background-color 32s;
-}
-
-.spin:hover {
-  background-color: transparent;
-  display: none;
+  -webkit-animation: bg-spin 8s;
+          animation: bg-spin 8s;
 }
 
 .fa-spinner {
@@ -251,12 +202,17 @@ a {
   top: calc(50% - 50px);
   left: calc(50% - 50px);
   position: absolute;
-  -webkit-animation: spin 3000ms 0ms ease-in-out;
-          animation: spin 3000ms 0ms ease-in-out;
+  -webkit-animation: spin 2000ms 0ms ease-in-out;
+          animation: spin 2000ms 0ms ease-in-out;
   -webkit-animation-iteration-count: 3;
           animation-iteration-count: 3;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356DC));
+  background-image: linear-gradient(#ff79da, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .fa-spinner::-webkit-backdrop {
