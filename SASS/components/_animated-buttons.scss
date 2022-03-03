@@ -47,11 +47,12 @@
     top: calc(50% - 50px);
     left: calc(50% - 50px);
     position: absolute;
-    animation: spin 3s  backwards;
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: spin 3s forwards;
+    animation-timing-function:linear;
     animation-iteration-count: 3;
     background-image:linear-gradient(#ff79da, #9356DC);   
     background-clip: text; 
     -webkit-background-clip: text;
-    color: transparent;    
+    color: transparent;
+    display: none;    
 }
