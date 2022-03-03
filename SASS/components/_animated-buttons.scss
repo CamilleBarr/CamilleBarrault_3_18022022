@@ -5,7 +5,7 @@
 .empty-heart{
     font-size: 25px;
     opacity: 1;
-    transition: opacity 1s;   
+    transition: opacity 500ms;   
 }
 .select-heart{
     font-size: 25px;
@@ -18,15 +18,18 @@
     opacity: 0; 
     + .select-heart, .select-heart:hover{
         display: block;
-        animation: heart 1s forwards;
+        animation: heart 1s both infinite;
         background-image:linear-gradient(#ff79da, #9356DC);   
         background-clip: text; 
         -webkit-background-clip: text;
         color: transparent;
     }
-    + .select-heart, .select-heart:active{
+}
+.empty-heart:active{
+    opacity: 0;
+    + .select-heart{
         display: block;
-        animation: heart 1s forwards infinite;
+        animation: heart 1s forwards ;
         background-image:linear-gradient(#ff79da, #9356DC);   
         background-clip: text; 
         -webkit-background-clip: text;

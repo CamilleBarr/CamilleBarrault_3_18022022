@@ -232,12 +232,6 @@ a {
   background-clip: border-box;
   flex-basis: 100%;
   margin: -15px 0px 20px 0px;
-  opacity: 1;
-  transform: opacity;
-  transition: transform 400ms;
-}
-.main__menu :hover {
-  opacity: 0;
 }
 
 .main__title {
@@ -281,6 +275,12 @@ a {
   flex-flow: wrap column;
   flex-basis: 100%;
   padding: 0px 10px;
+  opacity: 1;
+  transform: opacity;
+  transition: transform 400ms;
+}
+.bloc__menu :hover {
+  opacity: 0;
 }
 
 .card {

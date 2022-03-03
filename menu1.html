@@ -18,10 +18,7 @@
             <link rel="stylesheet" href="./sass/main.scss">
             <link rel="stylesheet" href="./CSS/normalize.css"> 
         </head>
-        <body>
-            <div class="spin spin--hidden">
-            <span class="fas fa-spinner spin--hidden"></span>
-            </div>
+        <body>        
             <header >
                 <a class="h" href="./ohmyfood_homepage.html">
                     <span class="fas fa-arrow-left btn-return">                    
@@ -30,10 +27,11 @@
                         <img class="img__header" src="./images/logo/ohmyfood.png" alt="companylogo"/>
                     </p>                
                 </a>
+                <p>
+                    <img class="bg-img" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la Française">
+                </p>
             </header>
-            <p class="">
-            <img class="bg-img" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la Française">
-            </p>
+            
             <main class="main__menu">
                 <div class="main__title">               
                     <h1>A la française</h1>
@@ -41,10 +39,12 @@
                         <span  href="#" class="far fa-heart empty-heart"></span>
                         <span  href="#" class="fas fa-heart select-heart"></span>
                     </div>
-                </div> 
+                </div>
+                
                 <section class="bloc__menu">
+                    <div class="animated-menu">
                     <h2 class="section-title__menu">Entrées</h2>
-                    <div class="card__menu">
+                    <card class="card__menu">
                         <span class="presentation__menu">
                             <h3 class="card-title">Tartare de poulpe acidulé
                             </h3>
@@ -52,12 +52,12 @@
                             </p>
                         </span>    
                         <span class="price">25€                        
-                        </span>                        
-                    </div>
-                    <div class="check">
-                        <span class="far fa-check-circle"></span>
-                    </div>
-                    <div class="card__menu">
+                        </span> 
+                        <div class="check">
+                            <span class="far fa-check-circle"></span>
+                        </div>                       
+                    </card>                    
+                    <card class="card__menu">
                         <span class="presentation__menu">
                             <h3 class="card-title">Velouté de légumes d'antan
                             </h3>
@@ -66,8 +66,8 @@
                         </span>    
                         <span class="price">35€                        
                         </span>
-                    </div>
-                    <div href="#" class="card__menu">
+                    </card>
+                    <card href="#" class="card__menu">
                         <span class="presentation__menu">
                             <h3 class="card-title">Soupe à l'oignon
                             </h3>
@@ -76,11 +76,13 @@
                         </span>    
                         <span class="price">20€                        
                         </span>
-                    </div>
+                    </card>
+                </div>
                 </section>
                 <section class="bloc__menu">
-                    <h2 class="section-title__menu">plat</h2>
-                    <div class="card__menu">
+                    <div class="animated-menu">
+                    <h2 class="section-title__menu">plat</h2>                    
+                    <card class="card__menu">
                         <span class="presentation__menu">
                             <h3 class="card-title">Coquilles Saint-Jacques
                             </h3>
@@ -89,11 +91,8 @@
                         </span>    
                         <span class="price">40€                        
                         </span>                        
-                    </div>
-                    <div class="">
-                        <span class="far "></span>
-                    </div>
-                    <div class="card__menu">
+                    </card>
+                    <card class="card__menu">
                         <span class="presentation__menu">
                             <h3 class="card-title">Magret de canard
                             </h3>
@@ -102,8 +101,8 @@
                         </span>    
                         <span class="price">35€                        
                         </span>
-                    </div>
-                    <div href="#" class="card__menu">
+                    </card>
+                    <card href="#" class="card__menu">
                         <span class="presentation__menu">
                             <h3 class="card-title">Pigeonneau d'Ille-et-Vilaine
                             </h3>
@@ -112,11 +111,12 @@
                         </span>    
                         <span class="price">44€                        
                         </span>
-                    </div>
+                    </card>
                 </section>
                 <section class="bloc__menu">
+                    <div class="animated-menu">
                     <h2 class="section-title__menu">dessert</h2>
-                    <div class="card__menu">
+                    <card class="card__menu">
                         <span class="presentation__menu">
                             <h3 class="card-title">Pétales de violettes glacées
                             </h3>
@@ -125,11 +125,8 @@
                         </span>    
                         <span class="price">18€                        
                         </span>                        
-                    </div>
-                    <div class="">
-                        <span class="far "></span>
-                    </div>
-                    <div class="card__menu">
+                    </card>
+                    <card class="card__menu">
                         <span class="presentation__menu">
                             <h3 class="card-title">Fondant au chocolat
                             </h3>
@@ -138,8 +135,8 @@
                         </span>    
                         <span class="price">22€                        
                         </span>
-                    </div>
-                    <div href="#" class="card__menu">
+                    </card>
+                    <card href="#" class="card__menu">
                         <span class="presentation__menu">
                             <h3 class="card-title">Millefeuille croustillant
                             </h3>
@@ -148,8 +145,10 @@
                         </span>    
                         <span class="price">23€                        
                         </span>
-                    </div>
+                    </card>
+                </div>
                 </section>
+                
                 <button class="main-btn__order">Commander</button>
             </main>
             <footer class="f">

@@ -17,7 +17,10 @@
     margin: 40px 0px;
     transform: scale(1);
     transition: transform 200ms;
-    &:hover :focus{
+    &:hover{
+        transform: scale(1.15);    
+    }
+    &:focus{
         transform: scale(1.15);    
     }
 }
@@ -29,7 +32,7 @@
         display:none
     }
 }
-.newsflash__new{
+.newsflash{
     display: flex;
     background-color: #99E2D0;
     color: darken($color:#99E2D0, $amount: 40%);
@@ -41,6 +44,6 @@
     margin-top: 15px;
     margin-left: 200px;                            
 }
-.newsflash__new:nth-child(2){
+.newsflash:nth-child(2){
     display: none;
 } 

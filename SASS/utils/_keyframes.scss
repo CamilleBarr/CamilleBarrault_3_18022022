@@ -14,7 +14,7 @@
     0%, 80% {
         display: block;
         background-color: #ffffff;
-        z-index: 13;
+        
     }
     100%{
         display: none;
@@ -24,9 +24,17 @@
 }
 @keyframes heart{
     0%{
-        opacity:0;        
+        opacity:0%;        
     }
     100%{
         opacity:100%;
     }
+}
+@keyframes animated-menu{
+    0%{
+         opacity:0; 
+     }
+     100%{
+         opacity:1;
+     }
 }

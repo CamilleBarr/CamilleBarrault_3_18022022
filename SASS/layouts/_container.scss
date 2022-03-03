@@ -7,20 +7,14 @@
         justify-content: center;
         gap: 10px;
         width: 100%;
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
         background-color: #f2f2f2;
         z-index: 1;
         position:relative;
         background-clip: border-box;
         flex-basis: 100%;
-        margin: -15px 0px 20px 0px;
-        opacity: 1;
-        transform: opacity ;
-        transition: transform 400ms;
-        :hover{
-            opacity:  0;
-        }          
+        margin: -15px 0px 20px 0px;                  
     }
 }
 .main__title{
@@ -54,17 +48,47 @@
         margin: 5px;
     }
 }
-
 .bloc__restaurant{
     display:flex;
     flex-flow:wrap column;
-    padding: 40px 20px;
+    padding: 40px 20px; 
+    //animation: menu 5s ease-in-out ;   
 }
 .bloc__menu{
     display:flex;
     flex-flow:wrap column;
     flex-basis: 100%;
-    padding: 0px 10px;    
+    padding: 0px 10px;
+}
+// .bloc__menu:nth-child(1){
+//      animation-duration:10s;
+// }
+// .bloc__menu:nth-child(2){
+//     animation-duration:10s;
+// }
+// .bloc__menu:nth-child(3){
+//     animation-duration:10s;
+// }
+.animated-menu:nth-child(1){
+    display: flex;
+    animation:animated-menu 2s forwards;
+    animation-fill-mode: both;
+    animation-delay: 0ms;
+    animation-timing-function: ease-in-out;
+}
+.animated-menu:nth-child(2){
+    display: flex;
+    animation:animated-menu 4s forwards;
+    animation-fill-mode: both;
+    animation-delay: 0ms;
+    animation-timing-function: ease-in-out;
+}
+.animated-menu:nth-child(3){
+    display: flex;
+    animation:animated-menu 6s forwards;
+    animation-fill-mode: both;
+    animation-delay: 0ms;
+    animation-timing-function: ease-in-out;
 }
 .card{
     height:280px;
@@ -83,7 +107,6 @@
     align-items:center;
     justify-content: space-between; 
     padding: 0px 10px;
-    cursor: pointer;    
 }
 .card-title{
     padding:10px 0px;
@@ -91,14 +114,12 @@
     font-weight: 500;
     margin-block-end: 0px;
     margin-block-start: 0px;
-    overflow: hidden;
 }
 .card-subtitle{
     margin-block-end: 0px;
     margin-block-start: 0px;
     padding: 10px 0px;
     font-size: 15px;
-    text-overflow: hidden;
     color: lighten($color: #000000, $amount: 30%);
 }
 .restaurant__Img{
@@ -129,22 +150,22 @@
     display:none;
     color: invert;
     background-color: #ffffff;
-    transform: rotate(0°);
-    transition: rotate 200ms 1s;
-    transform: rotate(180°);
-    transform: scaleX(0) rotate(0°);
-    transition: transform 2000ms;
-        :hover {
-        transform: scaleX(left 30px) rotate(180°);
-    }
+    // transform: rotate(0deg);
+    // transition: rotate 200ms 1s;
+    // transform: rotate(180deg);
+    // transform: scaleX(0) rotate(0deg);
+    // transition: transform 2000ms;
+    //     :hover {
+    //     transform: scaleX(left 30px) rotate(180deg);
+    // }
 }
 .price{
     font-size: 15px;
     text-align: center;
     position: relative;  
     font-weight: 500;
-    transition: background 2000ms;
-    transform: background;
+    //transition: background 2000ms;
+    //transform: background;
 }
 .bg-img{
     height: 200px;
