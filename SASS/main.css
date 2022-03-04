@@ -249,18 +249,9 @@ a {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin: -15px 0px 20px 0px;
-  opacity: 1;
-  -webkit-transform: opacity;
-          transform: opacity;
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
+  
 }
 
-.main__menu :hover {
-  opacity: 0;
-}
 
 .main__title {
   display: -webkit-box;

@@ -53,13 +53,14 @@
     flex-flow:wrap column;
     padding: 40px 20px;  
 }
-.bloc__menu{
+//.bloc__menu{
+    
+//}
+.animated-menu{
     display:flex;
     flex-flow:wrap column;
     flex-basis: 100%;
     padding: 0px 10px;
-}
-.animated-menu{
     display: flex;
     animation:animated-menu 4s ;
     animation-timing-function: ease-in-out;
@@ -75,6 +76,8 @@
     animation-delay: 10s;
 }
 .card{
+    display: flex;
+    flex-flow: column wrap;
     height:280px;
     @include border-shadow-radius;
     margin: 15px 0px; 
@@ -151,6 +154,4 @@
 //     //transition: background 2000ms;
 //     //transform: background;
 // }
-.bg-img{
-    height: 200px;
-}
+
