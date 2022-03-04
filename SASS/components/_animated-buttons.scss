@@ -9,7 +9,7 @@
 .empty-heart:hover{
     color: transparent;
     font-weight: 900;
-    animation: heart 3s both infinite ;
+    animation: heart 2s both ;
     background-image:linear-gradient( #9356DC,#ff79da);
     background-clip: text; 
     -webkit-background-clip: text;
@@ -21,16 +21,15 @@
     animation: bg-spin 8s;
 }
 .fa-spinner{
-    background-color: transparent;
     top: calc(50% - 50px);
     left: calc(50% - 50px);
     position: absolute;
-    animation: spin 3s forwards;
+    animation: spin 2s ;
     animation-timing-function:linear;
     animation-iteration-count: 3;
     background-image:linear-gradient(#ff79da, #9356DC);   
     background-clip: text; 
     -webkit-background-clip: text;
     color: transparent;
-    display: none;    
+    opacity: 0; // peut etre remplacé par hidden ?
 }

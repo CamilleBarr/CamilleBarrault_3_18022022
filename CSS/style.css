@@ -15,8 +15,8 @@
 }
 @keyframes bg-spin {
   0%, 80% {
-    display: block;
     background-color: #ffffff;
+    z-index: 13;
   }
   100% {
     display: none;
@@ -39,6 +39,16 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+@keyframes check {
+  0% {
+    transform: rotate(180deg);
+    transform: translateX(100px);
+  }
+  100% {
+    transform: rotate(360deg);
+    transform: translateX(0px);
   }
 }
 body {
@@ -130,7 +140,7 @@ a {
 .empty-heart:hover {
   color: transparent;
   font-weight: 900;
-  animation: heart 3s both infinite;
+  animation: heart 2s both;
   background-image: linear-gradient(#9356DC, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
@@ -144,18 +154,17 @@ a {
 }
 
 .fa-spinner {
-  background-color: transparent;
   top: calc(50% - 50px);
   left: calc(50% - 50px);
   position: absolute;
-  animation: spin 3s forwards;
+  animation: spin 2s;
   animation-timing-function: linear;
   animation-iteration-count: 3;
   background-image: linear-gradient(#ff79da, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  display: none;
+  opacity: 0;
 }
 
 .f {
@@ -271,19 +280,21 @@ a {
   flex-flow: column;
   flex-basis: 100%;
   padding: 0px 10px;
-  animation: animated-menu 1s;
 }
 
-.bloc__menu:nth-child(1) {
+.animated-menu.first {
+  animation: animated-menu 2s steps(3);
   animation-delay: 0s;
 }
 
-.bloc__menu:nth-child(2) {
-  animation-delay: 10s;
+.animated-menu.second {
+  animation: animated-menu 3s steps(2) 500ms;
+  animation-delay: 0s;
 }
 
-.bloc__menu:nth-child(3) {
-  animation-delay: 15s;
+.animated-menu.third {
+  animation: animated-menu 4s steps(1) 1000ms;
+  animation-delay: 0s;
 }
 
 .card {
@@ -304,10 +315,28 @@ a {
   border-radius: 20px;
   margin: 5px 0px;
   background-color: #ffffff;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
   padding: 0px 10px;
+  cursor: pointer;
+}
+.card__menu .card__menu:active + .check {
+  display: block;
+  animation: check 2s;
+}
+
+.presentation {
+  line-height: 15px;
+}
+
+.presentation__menu {
+  display: block;
+  line-height: 5px;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  flex-wrap: nowrap;
+  line-break: strict;
 }
 
 .card-title {
@@ -316,6 +345,13 @@ a {
   font-weight: 500;
   margin-block-end: 0px;
   margin-block-start: 0px;
+  text-overflow: ellipsis;
+  overflow-block: hidden;
+  overflow-inline: hidden;
+  overflow-inline: clip;
+  overflow-x: hidden;
+  line-break: strict;
+  word-wrap: nowrap;
 }
 
 .card-subtitle {
@@ -324,6 +360,10 @@ a {
   padding: 10px 0px;
   font-size: 15px;
   color: #4d4d4d;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  word-wrap: nowrap;
+  line-break: strict;
 }
 
 .restaurant__Img {
@@ -341,12 +381,14 @@ a {
   justify-content: space-between;
 }
 
-.presentation {
-  line-height: 15px;
-}
-
-.presentation__menu {
-  line-height: 5px;
+.check {
+  display: none;
+  width: 70px;
+  height: inherit;
+  background-color: #99E2D0;
+  border-top-right-radius: 30%;
+  border-bottom-right-radius: 30%;
+  margin-right: -10px;
 }
 
 .bloc__fct {

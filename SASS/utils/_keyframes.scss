@@ -2,8 +2,8 @@
     0% {
         transform: rotate(0deg);
         opacity: 1;
-        font-size: 80px;     }
-
+        font-size: 80px;         
+    }
     100%{
         transform: rotate(360deg);
         opacity: 0;
@@ -12,8 +12,8 @@
 }
 @keyframes bg-spin{
     0%, 80% {
-        display: block;
-        background-color: #ffffff;        
+        background-color: #ffffff;
+        z-index: 13;        
     }
     100%{
         display: none;
@@ -37,4 +37,15 @@
          opacity:1;
          transform:translateY(0px);
      }
+}
+@keyframes check{    
+    0% {
+        transform: rotate(180deg); 
+        transform: translateX(100px);     
+    }
+    100%{
+        transform: rotate(360deg);
+        
+        transform: translateX(0px); 
+    }
 }
