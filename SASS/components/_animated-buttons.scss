@@ -4,26 +4,15 @@
 }
 .empty-heart{
     font-size: 25px;
-    opacity: 1;
-    transition: opacity 500ms;   
-}
-.select-heart{
-    font-size: 25px;
-    display:none;
-    position: absolute;
-    top: 0;
-    left:0;
+    transition: color 500ms; 
 }
 .empty-heart:hover{
-    opacity: 0; 
-    + .select-heart, .select-heart:hover{
-        display: block;
-        animation: heart 1s both infinite ;
-        background-image:linear-gradient(#ff79da, #9356DC);   
-        background-clip: text; 
-        -webkit-background-clip: text;
-        color: transparent;
-    }
+    color: transparent;
+    font-weight: 900;
+    animation: heart 3s both infinite ;
+    background-image:linear-gradient( #9356DC,#ff79da);
+    background-clip: text; 
+    -webkit-background-clip: text;
 }
 .spin{  
     position: fixed;

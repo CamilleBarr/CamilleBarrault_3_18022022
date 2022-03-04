@@ -124,28 +124,16 @@ a {
 
 .empty-heart {
   font-size: 25px;
-  opacity: 1;
-  transition: opacity 500ms;
-}
-
-.select-heart {
-  font-size: 25px;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
+  transition: color 500ms;
 }
 
 .empty-heart:hover {
-  opacity: 0;
-}
-.empty-heart:hover + .select-heart, .empty-heart:hover .select-heart:hover {
-  display: block;
-  animation: heart 1s both infinite;
-  background-image: linear-gradient(#ff79da, #9356DC);
+  color: transparent;
+  font-weight: 900;
+  animation: heart 3s both infinite;
+  background-image: linear-gradient(#9356DC, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
 }
 
 .spin {
@@ -208,7 +196,6 @@ a {
 
 .img__header {
   inline-size: 150px;
-  /* shape-image-threshold: 5; */
 }
 
 .bg-img {
@@ -216,7 +203,6 @@ a {
   height: 230px;
   object-fit: cover;
   margin: -20px 0px -40px 0px;
-  /* z-index: 2; */
 }
 
 .main {
@@ -274,27 +260,30 @@ a {
   padding: 40px 20px;
 }
 
-.animated-menu {
+.bloc__menu {
   display: flex;
-  flex-flow: wrap column;
-  flex-basis: 100%;
-  padding: 0px 10px;
-  display: flex;
-  animation: animated-menu 4s;
-  animation-timing-function: ease-in-out;
-  animation-direction: reverse;
+  flex-flow: row;
+  width: 100%;
 }
 
-.animated-menu:nth-child(1) {
+.animated-menu {
+  display: flex;
+  flex-flow: column;
+  flex-basis: 100%;
+  padding: 0px 10px;
+  animation: animated-menu 1s;
+}
+
+.bloc__menu:nth-child(1) {
   animation-delay: 0s;
 }
 
-.animated-menu:nth-child(2) {
-  animation-delay: 5s;
+.bloc__menu:nth-child(2) {
+  animation-delay: 10s;
 }
 
-.animated-menu:nth-child(3) {
-  animation-delay: 10s;
+.bloc__menu:nth-child(3) {
+  animation-delay: 15s;
 }
 
 .card {
