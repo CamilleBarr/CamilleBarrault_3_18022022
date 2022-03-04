@@ -64,25 +64,17 @@
     flex-flow: column;
     ///@mediaqueries v.tablet or deskto :flex-flow:column;
     flex-basis: 100%;
-    padding: 0px 10px;
-    //animation:animated-menu 1s steps(2) ;
-    //animation-timing-function: ease-in-out;
-    //animation-direction: alternate;
-    
+    padding: 0px 10px;    
 }
 .animated-menu.first{
-    animation:animated-menu 2s steps(3);
-    animation-delay: 0s;
+    animation:animated-menu 1000ms steps(6);
 }
 .animated-menu.second{
-    animation:animated-menu 3s steps(2) 500ms;
-    animation-delay: 0s;
+    animation:animated-menu 1500ms steps(4);
 }
 .animated-menu.third{
-    animation:animated-menu 4s steps(1) 1000ms ;
-    animation-delay: 0s;
+    animation:animated-menu 2000ms steps(1);
 }
-
 .card{
     display: flex;
     flex-flow: column wrap;
@@ -106,7 +98,7 @@
     .card__menu:active{
         +.check {
             display: block;
-            animation: check 2s;
+            
          }
     } 
 }
@@ -114,6 +106,10 @@
     line-height: 15px;
 }
 .presentation__menu{
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1;
+    width: auto;
     display: block;
     line-height: 5px;
     text-overflow: ellipsis;
@@ -126,6 +122,7 @@
     //word-wrap: nowrap; pas pris en compte
 }
 .card-title{
+    width: auto;
     padding:10px 0px;
     font-size: 18px;
     font-weight: 500;
@@ -141,6 +138,7 @@
     word-wrap: nowrap;
 }
 .card-subtitle{
+    width: auto;
     margin-block-end: 0px;
     margin-block-start: 0px;
     padding: 10px 0px;
@@ -169,29 +167,31 @@
 }
 
 .check{
-    display: none;
+    display: block;
     width: 70px;
     height: inherit;
     background-color: #99E2D0;
     border-top-right-radius: 30%;
     border-bottom-right-radius: 30%;
     margin-right: -10px;
+    animation: check 2s;
 }
-// .fa-check-circle{    
-//     font-weight: 800;
-//     position: relative ;
-//     top: calc(50% - 15px);
-//     left: calc(50% - 15px);
-//     color: #ffffff;
-//     background-color:transparent ;
-//     background-clip: text; 
-//     -webkit-background-clip: text;
-//     font-size: 25px;   
-//     :hover{
-//         //transform: rotate(360deg); 
-//         animation: check 5s linear; 
-//     }
-//  }
+.fa-check-circle{  
+    transform: rotate(360deg);  
+    transition: transform 2000ms;
+     font-weight: 800;
+     position: relative ;
+     top: calc(50% - 15px);
+     left: calc(50% - 15px);
+     color: #ffffff;
+     background-color:transparent ;
+     background-clip: text; 
+     -webkit-background-clip: text;
+     font-size: 25px;   
+     :hover{
+        transform: rotate(180deg); 
+     }
+  }
 // .price{
 //     font-size: 15px;
 //     text-align: center;
