@@ -51,8 +51,7 @@
 .bloc__restaurant{
     display:flex;
     flex-flow:wrap column;
-    padding: 40px 20px; 
-    //animation: menu 5s ease-in-out ;   
+    padding: 40px 20px;  
 }
 .bloc__menu{
     display:flex;
@@ -60,35 +59,20 @@
     flex-basis: 100%;
     padding: 0px 10px;
 }
-// .bloc__menu:nth-child(1){
-//      animation-duration:10s;
-// }
-// .bloc__menu:nth-child(2){
-//     animation-duration:10s;
-// }
-// .bloc__menu:nth-child(3){
-//     animation-duration:10s;
-// }
-.animated-menu:nth-child(1){
+.animated-menu{
     display: flex;
-    animation:animated-menu 2s forwards;
-    animation-fill-mode: both;
-    animation-delay: 0ms;
+    animation:animated-menu 4s ;
     animation-timing-function: ease-in-out;
+    animation-direction: reverse;
+}
+.animated-menu:nth-child(1){
+    animation-delay: 0s;
 }
 .animated-menu:nth-child(2){
-    display: flex;
-    animation:animated-menu 4s forwards;
-    animation-fill-mode: both;
-    animation-delay: 0ms;
-    animation-timing-function: ease-in-out;
+    animation-delay: 5s;
 }
 .animated-menu:nth-child(3){
-    display: flex;
-    animation:animated-menu 6s forwards;
-    animation-fill-mode: both;
-    animation-delay: 0ms;
-    animation-timing-function: ease-in-out;
+    animation-delay: 10s;
 }
 .card{
     height:280px;
@@ -133,7 +117,7 @@
     display: flex;
     flex-flow:row wrap;
     align-items: center;
-    justify-content: space-between;        
+    justify-content: space-between; 
 }
 .presentation{   
     line-height: 15px;
@@ -141,32 +125,32 @@
 .presentation__menu{
     line-height: 5px;
 }
-.check{
-    margin: 10px;
-    width: 30%;
-    background-color: #99E2D0;
-}
-.fa-check-circle{    
-    display:none;
-    color: invert;
-    background-color: #ffffff;
-    // transform: rotate(0deg);
-    // transition: rotate 200ms 1s;
-    // transform: rotate(180deg);
-    // transform: scaleX(0) rotate(0deg);
-    // transition: transform 2000ms;
-    //     :hover {
-    //     transform: scaleX(left 30px) rotate(180deg);
-    // }
-}
-.price{
-    font-size: 15px;
-    text-align: center;
-    position: relative;  
-    font-weight: 500;
-    //transition: background 2000ms;
-    //transform: background;
-}
+// .check{
+//     margin: 10px;
+//     width: 30%;
+//     background-color: #99E2D0;
+// }
+// .fa-check-circle{    
+//     display:none;
+//     color: invert;
+//     background-color: #ffffff;
+//     transform: rotate(0deg);
+//     transition: rotate 200ms 1s;
+//     transform: rotate(180deg);
+//     transform: scaleX(0) rotate(0deg);
+//     transition: transform 2000ms;
+//          :hover {
+//          transform: scaleX(left 30px) rotate(180deg);
+//     }
+// }
+// .price{
+//     font-size: 15px;
+//     text-align: center;
+//     position: relative;  
+//     font-weight: 500;
+//     //transition: background 2000ms;
+//     //transform: background;
+// }
 .bg-img{
     height: 200px;
 }

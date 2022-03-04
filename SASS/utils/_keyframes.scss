@@ -13,29 +13,29 @@
 @keyframes bg-spin{
     0%, 80% {
         display: block;
-        background-color: #ffffff;
-        
+        background-color: #ffffff;        
     }
     100%{
         display: none;
         background-color: transparent;
-        z-index: -1;
+        color: transparent;
     }
 }
 @keyframes heart{
     0%{
-        transform-origin: 0 0 0;
         opacity:0;        
     }
     100%{
-        opacity:100;
+        opacity:1;
     }
 }
 @keyframes animated-menu{
     0%{
          opacity:0; 
+         transform:translateY(15px);
      }
      100%{
          opacity:1;
+         transform:translateY(0px);
      }
 }
