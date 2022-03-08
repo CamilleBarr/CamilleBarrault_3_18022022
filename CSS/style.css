@@ -89,6 +89,7 @@ a {
   background: linear-gradient(to bottom right, #ff79da, #9356DC);
   cursor: pointer;
   color: #ffffff;
+  flex-basis: 20%;
   padding: 15px 30px;
   margin: 40px 0px;
   transform: scale(1);
@@ -111,19 +112,31 @@ a {
 }
 
 .newsflash {
-  display: flex;
   background-color: #99E2D0;
   color: #278870;
   font-weight: 500;
   font-size: 14px;
   padding: 5px 7px;
   z-index: 1;
+  margin-top: 2%;
+  margin-left: 65%;
   position: absolute;
-  margin-top: 15px;
-  margin-left: 200px;
+  text-transform: capitalize;
 }
-
-.newsflash:nth-child(2) {
+.newsflash__1 {
+  display: inline-flex;
+}
+.newsflash__2 {
+  display: inline-flex;
+}
+.newsflash__3 {
+  display: none;
+  background-color: #ee8368;
+  color: #7c240e;
+  text-transform: uppercase;
+  margin-left: 55%;
+}
+.newsflash__4 {
   display: none;
 }
 
@@ -139,17 +152,7 @@ a {
   transition: color 500ms;
 }
 
-.empty-heart:hover {
-  color: transparent;
-  font-weight: 900;
-  animation: heart 2s both;
-  background-image: linear-gradient(#9356DC, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  z-index: 2;
-}
-
-.empty-heart:checked {
+.empty-heart .input-heart:checked {
   color: transparent;
   font-weight: 900;
   animation: heart 2s both;
@@ -164,6 +167,7 @@ a {
   width: 100%;
   height: 100%;
   animation: bg-spin 8s;
+  z-index: -10;
 }
 
 .fa-spinner {
@@ -189,7 +193,7 @@ a {
 .f__logo {
   width: 100%;
   filter: invert(100%);
-  inline-size: 50%;
+  inline-size: 120px;
 }
 .f__list {
   list-style-type: none;
@@ -243,7 +247,7 @@ a {
   position: relative;
   background-clip: border-box;
   flex-basis: 100%;
-  margin: -15px 0px 20px 0px;
+  margin: -15px 0px 0px 0px;
 }
 
 .main__title {
@@ -557,6 +561,16 @@ a {
     flex-basis: 30%;
     margin: 15px;
   }
+
+  .card__menu {
+    max-width: 80%;
+    margin: 5px 50px;
+  }
+
+  .newsflash {
+    margin-top: 1%;
+    margin-left: 20%;
+  }
 }
 @media all and (min-device-width: 728px) and (max-device-width: 981px) {
   .fct__step {
@@ -564,6 +578,10 @@ a {
     width: 50%;
     text-align: center;
     position: relative;
+  }
+
+  .bloc__menu {
+    width: 80%;
   }
 
   .all_cards {
@@ -576,6 +594,16 @@ a {
     flex: 1;
     flex-basis: 30%;
     margin: 15px;
+  }
+
+  .card__menu {
+    max-width: 100%;
+    margin: 5px;
+  }
+
+  .newsflash {
+    margin-top: 2%;
+    margin-left: 33%;
   }
 }
 

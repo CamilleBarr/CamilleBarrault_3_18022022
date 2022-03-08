@@ -8,7 +8,17 @@
     font-size: 25px;
     transition: color 500ms; 
 }
-.empty-heart:hover{
+// .empty-heart:hover{
+//     color: transparent;
+//     font-weight: 900;
+//     animation: heart 2s both ;
+//     background-image:linear-gradient( #9356DC,#ff79da);
+//     background-clip: text; 
+//     -webkit-background-clip: text;
+//     z-index: 2;
+// }
+.input-heart:checked {
+.empty-heart & {
     color: transparent;
     font-weight: 900;
     animation: heart 2s both ;
@@ -16,21 +26,14 @@
     background-clip: text; 
     -webkit-background-clip: text;
     z-index: 2;
-}
-.empty-heart:checked {
-    color: transparent;
-    font-weight: 900;
-    animation: heart 2s both ;
-    background-image:linear-gradient( #9356DC,#ff79da);
-    background-clip: text; 
-    -webkit-background-clip: text;
-    z-index: 2;
+    }
 }
 .spin{  
     position: fixed;
     width: 100%;
     height: 100%;   
     animation: bg-spin 8s;
+    z-index: -10;
 }
 .fa-spinner{
     top: calc(50% - 50px);

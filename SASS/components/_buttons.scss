@@ -13,6 +13,7 @@
 }
 .main-btn__order{
     @include main-button;
+    flex-basis: 20%;
     padding: 15px 30px; 
     margin: 40px 0px;
     transform: scale(1);
@@ -33,17 +34,30 @@
     }
 }
 .newsflash{
-    display: flex;
     background-color: #99E2D0;
     color: darken($color:#99E2D0, $amount: 40%);
     font-weight: 500;
     font-size: 14px;
     padding: 5px 7px;
     z-index: 1;
+    margin-top: 2%;
+    margin-left: 65%; 
     position: absolute;
-    margin-top: 15px;
-    margin-left: 200px;                            
+    text-transform: capitalize;
+    &__1{
+        display: inline-flex;
+    }
+    &__2{
+        display: inline-flex;
+    }
+    &__3{
+        display: none;
+        background-color: #ee8368;
+        color: darken($color:#EE8368, $amount: 40%);
+        text-transform: uppercase;
+        margin-left: 55%;
+    }  
+    &__4{
+        display: none;
+    }                             
 }
-.newsflash:nth-child(2){
-    display: none;
-} 
