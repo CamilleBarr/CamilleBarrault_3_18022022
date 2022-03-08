@@ -85,6 +85,7 @@
     background-color: #ffffff;
 }
 .card__menu{
+    max-width: 260px;
     height:70px;
     display: flex;
     @include border-shadow-radius;
@@ -94,63 +95,88 @@
     align-items:center;
     justify-content: space-between; 
     padding: 0px 10px;
-    cursor: pointer;
-    .card__menu:active{
-        +.check {
-            display: block;
-            
-         }
-    } 
+    z-index: 3;    
+    text-overflow: ellipsis;
+    cursor: pointer; 
+    .card__menu:hover > .check{
+        animation: check 2s;
+    }
 }
+.price{ 
+    padding: 30px 10px;
+    font-size: 15px; 
+    font-weight: 500;
+    //padding-right: 10px; 
+}
+ .check{
+    display: none;
+    justify-self: flex-end;
+    min-width: 70px;
+    height: inherit;
+    background-color: #99E2D0;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    margin-right: -10px;
+    margin-left: 10px;
+    transform: translateX(-20px);
+    transition:transform 10s;         
+}
+.price:hover {    
+    + .check{
+        display:inline-block;
+        animation: check 2s;
+        transform: translateX(0px);
+    }  
+}  
+.fa-check-circle{  
+    transform: rotate(360deg);  
+    transition: transform 2000ms;
+    font-weight: 800;
+    position: relative ;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    color: #ffffff;
+    background-color:transparent ;
+    background-clip: text; 
+    -webkit-background-clip: text;
+    font-size: 25px;   
+    .fa-check-circle +.check {
+       transform: rotate(180deg); 
+    }
+} 
 .presentation{   
     line-height: 15px;
 }
 .presentation__menu{
+    //max-width: 260px;
+    min-width: 130px;
     display: flex;
-    flex-wrap: nowrap;
-    flex: 1;
-    width: auto;
-    display: block;
+    flex-flow: column nowrap;
     line-height: 5px;
     text-overflow: ellipsis;
-    overflow-x: hidden;
-    //overflow-block: hidden; pas pris en compte
-    //overflow-inline: hidden; pas pris en compte
-    //overflow-inline: clip;  pas pris en compte
-    flex-wrap: nowrap;
-    line-break: strict;
-    //word-wrap: nowrap; pas pris en compte
+    overflow: hidden;
 }
 .card-title{
-    width: auto;
+    display: inline;
     padding:10px 0px;
     font-size: 18px;
     font-weight: 500;
     margin-block-end: 0px;
     margin-block-start: 0px;
     text-overflow: ellipsis;
-    overflow-block: hidden;
-    overflow-inline: hidden;
-    overflow-inline: clip;
-    
-    overflow-x: hidden;
-    line-break: strict;
-    word-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: clip;
 }
 .card-subtitle{
-    width: auto;
+    display: inline;
     margin-block-end: 0px;
     margin-block-start: 0px;
     padding: 10px 0px;
     font-size: 15px;
     color: lighten($color: #000000, $amount: 30%);
     text-overflow: ellipsis;
-    overflow-x: hidden;
-    //overflow-block: hidden;  refusé
-    //overflow-inline: hidden;  refusé
-    //overflow-inline: clip;  refusé
-    word-wrap: nowrap;
-    line-break: strict;
+    overflow-x: clip;
+    white-space: nowrap;
 }
 .restaurant__Img{
     width: 100%;
@@ -165,39 +191,4 @@
     align-items: center;
     justify-content: space-between; 
 }
-
-.check{
-    display: block;
-    width: 70px;
-    height: inherit;
-    background-color: #99E2D0;
-    border-top-right-radius: 30%;
-    border-bottom-right-radius: 30%;
-    margin-right: -10px;
-    animation: check 2s;
-}
-.fa-check-circle{  
-    transform: rotate(360deg);  
-    transition: transform 2000ms;
-     font-weight: 800;
-     position: relative ;
-     top: calc(50% - 15px);
-     left: calc(50% - 15px);
-     color: #ffffff;
-     background-color:transparent ;
-     background-clip: text; 
-     -webkit-background-clip: text;
-     font-size: 25px;   
-     :hover{
-        transform: rotate(180deg); 
-     }
-  }
-// .price{
-//     font-size: 15px;
-//     text-align: center;
-//     position: relative;  
-//     font-weight: 500;
-//     //transition: background 2000ms;
-//     //transform: background;
-// }
 

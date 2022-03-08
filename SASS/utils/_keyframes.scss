@@ -40,11 +40,11 @@
 }
 @keyframes check{    
     0% {
-        //transform: rotate(180deg); 
-        width: 0px;    
+        display: inline-block;
+        transform: translateX(70px); 
     }
     100%{
-        //transform: rotate(360deg);
-        width: 70px; 
+        display: inline-block;
+        transform: translateX(0px);    
     }
 }

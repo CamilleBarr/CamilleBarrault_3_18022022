@@ -43,10 +43,12 @@
 }
 @keyframes check {
   0% {
-    width: 0px;
+    display: inline-block;
+    transform: translateX(70px);
   }
   100% {
-    width: 70px;
+    display: inline-block;
+    transform: translateX(0px);
   }
 }
 body {
@@ -304,6 +306,7 @@ a {
 }
 
 .card__menu {
+  max-width: 260px;
   height: 70px;
   display: flex;
   box-shadow: 5px 5px 5px #e4e4e4;
@@ -314,82 +317,38 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0px 10px;
+  z-index: 3;
+  text-overflow: ellipsis;
   cursor: pointer;
 }
-.card__menu .card__menu:active + .check {
-  display: block;
+.card__menu .card__menu:hover > .check {
+  animation: check 2s;
 }
 
-.presentation {
-  line-height: 15px;
-}
-
-.presentation__menu {
-  display: flex;
-  flex-wrap: nowrap;
-  flex: 1;
-  width: auto;
-  display: block;
-  line-height: 5px;
-  text-overflow: ellipsis;
-  overflow-x: hidden;
-  flex-wrap: nowrap;
-  line-break: strict;
-}
-
-.card-title {
-  width: auto;
-  padding: 10px 0px;
-  font-size: 18px;
-  font-weight: 500;
-  margin-block-end: 0px;
-  margin-block-start: 0px;
-  text-overflow: ellipsis;
-  overflow-block: hidden;
-  overflow-inline: hidden;
-  overflow-inline: clip;
-  overflow-x: hidden;
-  line-break: strict;
-  word-wrap: nowrap;
-}
-
-.card-subtitle {
-  width: auto;
-  margin-block-end: 0px;
-  margin-block-start: 0px;
-  padding: 10px 0px;
+.price {
+  padding: 30px 10px;
   font-size: 15px;
-  color: #4d4d4d;
-  text-overflow: ellipsis;
-  overflow-x: hidden;
-  word-wrap: nowrap;
-  line-break: strict;
-}
-
-.restaurant__Img {
-  width: 100%;
-  height: 200px;
-  border-radius: 20px 20px 0px 0px;
-}
-
-.restaurant__Heading {
-  height: 50px;
-  padding: 0px 10px;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
+  font-weight: 500;
 }
 
 .check {
-  display: block;
-  width: 70px;
+  display: none;
+  justify-self: flex-end;
+  min-width: 70px;
   height: inherit;
   background-color: #99E2D0;
   border-top-right-radius: 30%;
   border-bottom-right-radius: 30%;
   margin-right: -10px;
+  margin-left: 10px;
+  transform: translateX(-20px);
+  transition: transform 10s;
+}
+
+.price:hover + .check {
+  display: inline-block;
   animation: check 2s;
+  transform: translateX(0px);
 }
 
 .fa-check-circle {
@@ -405,8 +364,60 @@ a {
   -webkit-background-clip: text;
   font-size: 25px;
 }
-.fa-check-circle :hover {
+.fa-check-circle .fa-check-circle + .check {
   transform: rotate(180deg);
+}
+
+.presentation {
+  line-height: 15px;
+}
+
+.presentation__menu {
+  min-width: 130px;
+  display: flex;
+  flex-flow: column nowrap;
+  line-height: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-title {
+  display: inline;
+  padding: 10px 0px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: clip;
+}
+
+.card-subtitle {
+  display: inline;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  padding: 10px 0px;
+  font-size: 15px;
+  color: #4d4d4d;
+  text-overflow: ellipsis;
+  overflow-x: clip;
+  white-space: nowrap;
+}
+
+.restaurant__Img {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.restaurant__Heading {
+  height: 50px;
+  padding: 0px 10px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .bloc__fct {
