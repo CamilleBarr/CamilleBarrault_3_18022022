@@ -83,6 +83,7 @@
     margin: 15px 0px; 
     z-index: 2;
     background-color: #ffffff;
+    
 }
 .card__menu{
     max-width: 260px;
@@ -145,7 +146,9 @@
     }
 } 
 .presentation{   
-    line-height: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    line-height: 5px;
 }
 .presentation__menu{
     //max-width: 260px;
@@ -185,7 +188,7 @@
 }
 .restaurant__Heading{
     height: 50px;
-    padding: 0px 10px;
+    padding: 10px;
     display: flex;
     flex-flow:row wrap;
     align-items: center;

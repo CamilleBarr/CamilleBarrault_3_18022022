@@ -1,8 +1,10 @@
 .heart-box{
     position: relative;
     cursor: pointer;
+    z-index:0;
 }
 .empty-heart{
+    z-index: 1;
     font-size: 25px;
     transition: color 500ms; 
 }
@@ -13,6 +15,16 @@
     background-image:linear-gradient( #9356DC,#ff79da);
     background-clip: text; 
     -webkit-background-clip: text;
+    z-index: 2;
+}
+.empty-heart:checked {
+    color: transparent;
+    font-weight: 900;
+    animation: heart 2s both ;
+    background-image:linear-gradient( #9356DC,#ff79da);
+    background-clip: text; 
+    -webkit-background-clip: text;
+    z-index: 2;
 }
 .spin{  
     position: fixed;

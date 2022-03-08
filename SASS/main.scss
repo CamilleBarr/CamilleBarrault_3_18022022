@@ -16,7 +16,50 @@
 @media all and (max-device-width: 728px){
      }     
 @media all and (min-device-width: 981px){
+    
+    .main{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .formulaire{
+        flex: 3;
+        flex-basis: 100%;
+    }
+    .bloc__fct{
+        flex: 1;
+    }
+    .bloc__restaurant{
+        flex: 2;
+        background-color: #ffffff;
+        padding: 20px;
+        
+    }
+    .all_cards{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 5px;
+    }
     .card{
-    display: flex;
+        flex: 1;
+        flex-basis: 30%;
+        margin:15px;
+    }
+}
+@media all and (min-device-width:728px) and (max-device-width: 981px){
+    .fct__step{
+        left: calc(50% - 25%);
+        width: 50%;
+        text-align: center;
+        position: relative;
+    }
+    .all_cards{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 5px;
+    }
+    .card{
+        flex: 1;
+        flex-basis: 30%;
+        margin:15px;
     }
 }

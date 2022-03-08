@@ -130,9 +130,11 @@ a {
 .heart-box {
   position: relative;
   cursor: pointer;
+  z-index: 0;
 }
 
 .empty-heart {
+  z-index: 1;
   font-size: 25px;
   transition: color 500ms;
 }
@@ -144,6 +146,17 @@ a {
   background-image: linear-gradient(#9356DC, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
+  z-index: 2;
+}
+
+.empty-heart:checked {
+  color: transparent;
+  font-weight: 900;
+  animation: heart 2s both;
+  background-image: linear-gradient(#9356DC, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  z-index: 2;
 }
 
 .spin {
@@ -369,7 +382,9 @@ a {
 }
 
 .presentation {
-  line-height: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  line-height: 5px;
 }
 
 .presentation__menu {
@@ -413,7 +428,7 @@ a {
 
 .restaurant__Heading {
   height: 50px;
-  padding: 0px 10px;
+  padding: 10px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -511,8 +526,56 @@ a {
 }
 
 @media all and (min-device-width: 981px) {
-  .card {
+  .main {
     display: flex;
+    flex-flow: row wrap;
+  }
+
+  .formulaire {
+    flex: 3;
+    flex-basis: 100%;
+  }
+
+  .bloc__fct {
+    flex: 1;
+  }
+
+  .bloc__restaurant {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+  .all_cards {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5px;
+  }
+
+  .card {
+    flex: 1;
+    flex-basis: 30%;
+    margin: 15px;
+  }
+}
+@media all and (min-device-width: 728px) and (max-device-width: 981px) {
+  .fct__step {
+    left: 25%;
+    width: 50%;
+    text-align: center;
+    position: relative;
+  }
+
+  .all_cards {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5px;
+  }
+
+  .card {
+    flex: 1;
+    flex-basis: 30%;
+    margin: 15px;
   }
 }
 
