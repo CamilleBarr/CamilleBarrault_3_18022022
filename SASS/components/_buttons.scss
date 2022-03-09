@@ -6,9 +6,11 @@
     transition: transform 200ms;
     &:hover{
         transform: scale(1.15);
+        box-shadow: 5px 5px 5px #cec3db ;         
     }
     &:focus{
         transform: scale(1.15);
+        box-shadow: 5px 5px 5px #cec3db  ;
     }
 }
 .main-btn__order{

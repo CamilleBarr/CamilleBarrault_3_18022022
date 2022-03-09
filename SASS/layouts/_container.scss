@@ -60,8 +60,8 @@
  }
 .animated-menu{
     display:flex;
+    width: 80%;
     flex-flow: column;
-    flex-basis: 100%;
     padding: 0px 10px;    
 }
 .animated-menu.first{
@@ -83,7 +83,7 @@
     background-color: #ffffff;    
 }
 .card__menu{
-    max-width: 260px;
+    max-width: 80%;
     height:70px;
     display: flex;
     @include border-shadow-radius;

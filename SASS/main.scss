@@ -21,6 +21,10 @@
         display: flex;
         flex-flow: row wrap;
     }
+    .bloc__menu{
+        max-width: 30%;
+        flex-flow: column wrap;
+    }
     .formulaire{
         flex: 3;
         flex-basis: 100%;
@@ -46,11 +50,14 @@
     }
     .card__menu{
         max-width: 80%;
-        margin: 5px 50px;
+        margin: 5px;
     }
     .newsflash{
         margin-top: 1%;
         margin-left: 15%;
+    }
+    .main__title{
+        padding: 10px 100px 0px 100px ;
     }
 }
 @media all and (min-device-width:728px) and (max-device-width: 981px){
@@ -80,5 +87,8 @@
     .newsflash{
         margin-top: 2%;
         margin-left: 33%;
+    }
+    .main__title{
+        padding: 10px 100px 0px 100px ;
     }
 }
