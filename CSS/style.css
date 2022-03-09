@@ -52,7 +52,6 @@
   }
 }
 body {
-  width: 100%;
   font-family: "Roboto", sans-serif;
 }
 
@@ -151,8 +150,7 @@ a {
   font-size: 25px;
   transition: color 500ms;
 }
-
-.empty-heart .input-heart:checked {
+.empty-heart:hover {
   color: transparent;
   font-weight: 900;
   animation: heart 2s both;

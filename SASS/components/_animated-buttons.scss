@@ -6,26 +6,15 @@
 .empty-heart{
     z-index: 1;
     font-size: 25px;
-    transition: color 500ms; 
-}
-// .empty-heart:hover{
-//     color: transparent;
-//     font-weight: 900;
-//     animation: heart 2s both ;
-//     background-image:linear-gradient( #9356DC,#ff79da);
-//     background-clip: text; 
-//     -webkit-background-clip: text;
-//     z-index: 2;
-// }
-.input-heart:checked {
-.empty-heart & {
-    color: transparent;
-    font-weight: 900;
-    animation: heart 2s both ;
-    background-image:linear-gradient( #9356DC,#ff79da);
-    background-clip: text; 
-    -webkit-background-clip: text;
-    z-index: 2;
+    transition: color 500ms;
+    &:hover{
+        color: transparent;
+        font-weight: 900;
+        animation: heart 2s both ;
+        background-image:linear-gradient( #9356DC,#ff79da);
+        background-clip: text; 
+        -webkit-background-clip: text;
+        z-index: 2;
     }
 }
 .spin{  
@@ -46,5 +35,17 @@
     background-clip: text; 
     -webkit-background-clip: text;
     color: transparent;
-    opacity: 0; // peut etre remplacé par hidden ?
+    opacity: 0;
 }
+//.empty-heart
+// .input-heart:checked {
+// .empty-heart & {
+//     color: transparent;
+//     font-weight: 900;
+//     animation: heart 2s both ;
+//     background-image:linear-gradient( #9356DC,#ff79da);
+//     background-clip: text; 
+//     -webkit-background-clip: text;
+//     z-index: 2;
+//     }
+// }

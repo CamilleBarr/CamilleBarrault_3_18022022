@@ -57,12 +57,10 @@
     display:flex;
     flex-flow: row;
     width: 100%;
-    //pour media queries changer la taille de width seulement, cela devrait marcher
  }
 .animated-menu{
     display:flex;
     flex-flow: column;
-    ///@mediaqueries v.tablet or deskto :flex-flow:column;
     flex-basis: 100%;
     padding: 0px 10px;    
 }
@@ -82,8 +80,7 @@
     @include border-shadow-radius;
     margin: 15px 0px; 
     z-index: 2;
-    background-color: #ffffff;
-    
+    background-color: #ffffff;    
 }
 .card__menu{
     max-width: 260px;
@@ -186,8 +183,7 @@
     height: 200px;
     border-radius: 20px 20px 0px 0px;
     image-rendering: crisp-edges;
-    object-fit:cover;
-    
+    object-fit:cover;    
 }
 .restaurant__Heading{
     height: 50px;
