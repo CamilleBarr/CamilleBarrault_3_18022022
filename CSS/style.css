@@ -34,21 +34,15 @@
 @keyframes animated-menu {
   0% {
     opacity: 0;
-    width: 0;
+  }
+  30% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
-    width: 70px;
-  }
-}
-@keyframes check {
-  0% {
-    display: inline-block;
-    transform: translateX(70px);
-  }
-  100% {
-    display: inline-block;
-    transform: translateX(0px);
   }
 }
 body {
@@ -90,7 +84,6 @@ a {
   background: linear-gradient(to bottom right, #ff79da, #9356DC);
   cursor: pointer;
   color: #ffffff;
-  flex-basis: 20%;
   padding: 15px 30px;
   margin: 40px 0px;
   transform: scale(1);
@@ -294,21 +287,22 @@ a {
 
 .animated-menu {
   display: flex;
-  width: 80%;
+  width: 90%;
   flex-flow: column;
   padding: 0px 10px;
+  margin: 0px;
 }
 
 .animated-menu.first {
-  animation: animated-menu 1000ms steps(6);
+  animation: animated-menu 1s 100ms;
 }
 
 .animated-menu.second {
-  animation: animated-menu 1500ms steps(4);
+  animation: animated-menu 2s 200ms;
 }
 
 .animated-menu.third {
-  animation: animated-menu 2000ms steps(1);
+  animation: animated-menu 3s 300ms;
 }
 
 .card {
@@ -323,7 +317,6 @@ a {
 }
 
 .card__menu {
-  max-width: 80%;
   height: 70px;
   display: flex;
   box-shadow: 5px 5px 5px #e4e4e423;
@@ -331,46 +324,38 @@ a {
   margin: 5px 0px;
   background-color: #ffffff;
   flex-flow: row nowrap;
-  align-items: center;
   justify-content: space-between;
-  padding: 0px 10px;
-  z-index: 3;
   text-overflow: ellipsis;
+  overflow: hidden;
   cursor: pointer;
 }
-.card__menu .card__menu:hover > .check {
-  animation: check 2s;
+
+.card__menu:hover .check {
+  width: 70px;
+}
+
+.card__menu:hover .check .fa-check-circle {
+  transform: rotate(360deg);
 }
 
 .price {
-  padding: 30px 10px;
+  align-self: flex-end;
+  margin: 10px;
   font-size: 15px;
   font-weight: 500;
 }
 
 .check {
-  display: none;
-  justify-self: flex-end;
-  min-width: 70px;
+  width: 0px;
   height: inherit;
   background-color: #99E2D0;
-  border-top-right-radius: 30%;
-  border-bottom-right-radius: 30%;
-  margin-right: -10px;
-  margin-left: 10px;
-  transform: translateX(-20px);
-  transition: transform 10s;
-}
-
-.price:hover + .check {
-  display: inline-block;
-  animation: check 2s;
-  transform: translateX(0px);
+  overflow: hidden;
+  transition: width 1s;
 }
 
 .fa-check-circle {
-  transform: rotate(360deg);
-  transition: transform 2000ms;
+  transform: rotate(200deg);
+  transition: transform 1000ms;
   font-weight: 800;
   position: relative;
   top: calc(50% - 15px);
@@ -381,47 +366,32 @@ a {
   -webkit-background-clip: text;
   font-size: 25px;
 }
-.fa-check-circle .fa-check-circle + .check {
-  transform: rotate(180deg);
-}
-
-.presentation {
-  display: flex;
-  flex-flow: column nowrap;
-  line-height: 5px;
-}
 
 .presentation__menu {
-  min-width: 130px;
   display: flex;
+  flex: 1;
   flex-flow: column nowrap;
-  line-height: 5px;
+  justify-content: space-between;
+  margin: 10px;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .card-title {
-  display: inline;
-  padding: 10px 0px;
   font-size: 18px;
   font-weight: 500;
   margin-block-end: 0px;
   margin-block-start: 0px;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow-x: clip;
 }
 
 .card-subtitle {
-  display: inline;
   margin-block-end: 0px;
   margin-block-start: 0px;
-  padding: 10px 0px;
   font-size: 15px;
   color: #4d4d4d;
   text-overflow: ellipsis;
-  overflow-x: clip;
-  white-space: nowrap;
 }
 
 .restaurant__Img {
@@ -552,7 +522,7 @@ a {
   }
 
   .bloc__restaurant {
-    flex: 2;
+    flex: 3;
     background-color: #ffffff;
     padding: 20px;
   }
@@ -565,18 +535,13 @@ a {
   }
 
   .card {
-    width: 30%;
-    margin: 15px;
-  }
-
-  .card__menu {
-    max-width: 80%;
+    width: 45%;
     margin: 5px;
   }
 
   .newsflash {
     margin-top: 1%;
-    margin-left: 15%;
+    margin-left: 24%;
   }
 
   .main__title {

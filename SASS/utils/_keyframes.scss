@@ -11,7 +11,7 @@
     }
 }
 @keyframes bg-spin{
-    0%, 80% {
+    0%, 80%{
         background-color: #ffffff;
         z-index: 13;        
     }
@@ -30,21 +30,25 @@
 }
 @keyframes animated-menu{
     0%{
-         opacity:0; 
-         width: 0;
-     }
-     100%{
-         opacity:1;
-         width: 70px;
-     }
-}
-@keyframes check{    
-    0% {
-        display: inline-block;
-        transform: translateX(70px); 
+        opacity:0; 
+    }
+    30%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity:0.5;
     }
     100%{
-        display: inline-block;
-        transform: translateX(0px);    
+        opacity:1;
     }
 }
+// @keyframes check{    
+//     0% {
+//         display: inline-block;
+//         transform: translateX(70px); 
+//     }
+//     100%{
+//         display: inline-block;
+//         transform: translateX(0px);    
+//     }
+// }

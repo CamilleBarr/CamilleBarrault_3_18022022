@@ -15,7 +15,6 @@
 }
 .main-btn__order{
     @include main-button;
-    flex-basis: 20%;
     padding: 15px 30px; 
     margin: 40px 0px;
     transform: scale(1);
