@@ -65,15 +65,6 @@
     padding: 0px 10px; 
     margin: 0px;   
 }
-.animated-menu.first{
-    animation:animated-menu 1s 100ms ;
-}
-.animated-menu.second{
-    animation:animated-menu 2s  200ms ;
-}
-.animated-menu.third{
-    animation:animated-menu 3s 300ms ;
-}
 .card{
     display: flex;
     flex-flow: column wrap;
@@ -96,38 +87,14 @@
     overflow: hidden;
     cursor: pointer; 
 }
-.card__menu:hover .check{
-    width: 70px;
-}
-.card__menu:hover .check .fa-check-circle  {
-    transform: rotate(360deg); 
- }
+
 .price{ 
     align-self: flex-end;
     margin:10px;
     font-size: 15px; 
     font-weight: 500; 
 }
- .check{
-    width: 0px;
-    height: inherit;
-    background-color: #99E2D0;
-    overflow: hidden;
-    transition: width 1s;          
-} 
-.fa-check-circle{  
-    transform: rotate(200deg);  
-    transition: transform 1000ms;
-    font-weight: 800;
-    position: relative ;
-    top: calc(50% - 15px);
-    left: calc(50% - 15px);
-    color: #ffffff;
-    background-color:transparent ;
-    background-clip: text; 
-    -webkit-background-clip: text;
-    font-size: 25px;
-} 
+ 
 .presentation__menu{
     //max-width: 260px;
     //min-width: 130px;

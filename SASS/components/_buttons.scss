@@ -2,29 +2,11 @@
     @include main-button;           
     padding: 18px 15px;
     margin: 20px 0px;
-    transform: scale(1);
-    transition: transform 200ms;
-    &:hover{
-        transform: scale(1.15);
-        box-shadow: 5px 5px 5px #cec3db ;         
-    }
-    &:focus{
-        transform: scale(1.15);
-        box-shadow: 5px 5px 5px #cec3db  ;
-    }
 }
 .main-btn__order{
     @include main-button;
     padding: 15px 30px; 
-    margin: 40px 0px;
-    transform: scale(1);
-    transition: transform 200ms;
-    &:hover{
-        transform: scale(1.15);    
-    }
-    &:focus{
-        transform: scale(1.15);    
-    }
+    margin: 40px 0px;    
 }
 .btn-return{
     font-size: 20px;
@@ -35,28 +17,24 @@
     }
 }
 .newsflash{
-    background-color: #99E2D0;
-    color: darken($color:#99E2D0, $amount: 40%);
-    font-weight: 500;
-    font-size: 14px;
-    padding: 5px 7px;
-    z-index: 1;
     margin-top: 2%;
     margin-left: 65%; 
+    padding: 5px 7px;
+    font-weight: 500;
+    font-size: 14px;
     position: absolute;
-    text-transform: capitalize;
+    z-index: 1;
     &__1{
         display: inline-flex;
+        @include newsflash-new;
     }
     &__2{
         display: inline-flex;
+        @include newsflash-new;
     }
     &__3{
         display: none;
-        background-color: #ee8368;
-        color: darken($color:#EE8368, $amount: 40%);
-        text-transform: uppercase;
-        margin-left: 55%;
+        
     }  
     &__4{
         display: none;

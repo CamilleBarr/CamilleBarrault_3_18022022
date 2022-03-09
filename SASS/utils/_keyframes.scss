@@ -42,13 +42,12 @@
         opacity:1;
     }
 }
-// @keyframes check{    
-//     0% {
-//         display: inline-block;
-//         transform: translateX(70px); 
-//     }
-//     100%{
-//         display: inline-block;
-//         transform: translateX(0px);    
-//     }
-// }
+.animated-menu.first{
+    animation:animated-menu 1s 100ms ;
+}
+.animated-menu.second{
+    animation:animated-menu 2s  200ms ;
+}
+.animated-menu.third{
+    animation:animated-menu 3s 300ms ;
+}
