@@ -3,24 +3,22 @@
 @import "./utils/_variables.scss";
 @import "./utils/keyframes.scss";
 @import "./utils/_mixin.scss";
-@import "./utils/_functions.scss";
 @import "./components/_buttons.scss";
 @import "./components/_animated-buttons.scss";
 @import "./layouts/_footer.scss";
 @import "./layouts/_header.scss";
 @import "./layouts/_container.scss";
-@import "./pages/_fonctionement.scss";
-@import "./pages/_form.scss";
+@import "./pages/_bloc-fn.scss";
+@import "./pages/_bloc-form.scss";
 
-@media all and (max-device-width: 728px){
-     }
-@media all and (min-device-width: 981px){
+@media all and (min-device-width: 768px){
 
     .main{
         display: flex;
         flex-flow: row wrap;
     }
     .bloc__menu{
+    //    width: 80%;
         max-width: 30%;
         flex-flow: column wrap;
     }
@@ -28,8 +26,14 @@
         flex: 3;
         flex-basis: 100%;
     }
-    .bloc__fct{
+    .bloc__fn{
         flex: 1;
+    }
+    .step__fn{
+        left: calc(50% - 25%);
+        width: 50%;
+        text-align: center;
+        position: relative;
     }
     .bloc__restaurant{
         flex: 3;
@@ -47,41 +51,14 @@
         width: 45%;
         margin:5px;
     }
+    //.card__menu{
+        //         max-width: 100%;
+        //         margin: 5px;
+        //     }
     .newsflash{
         margin-top: 1%;
-        margin-left: 24%;
-    }
-    .main__title{
-        padding: 10px 100px 0px 100px ;
-    }
-}
-@media all and (min-device-width:728px) and (max-device-width: 981px){
-    .fct__step{
-        left: calc(50% - 25%);
-        width: 50%;
-        text-align: center;
-        position: relative;
-    }
-    .bloc__menu{
-        width: 80%;
-    }
-    .all_cards{
-        display: flex;
-        flex-flow: row wrap;
-        gap: 5px;
-    }
-    .card{
-        flex: 1;
-        flex-basis: 30%;
-        margin:15px;
-    }
-    .card__menu{
-        max-width: 100%;
-        margin: 5px;
-    }
-    .newsflash{
-        margin-top: 2%;
-        margin-left: 33%;
+        margin-left: 20%;
+        
     }
     .main__title{
         padding: 10px 100px 0px 100px ;
