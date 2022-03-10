@@ -15,14 +15,14 @@
         padding: 25px 0px;
         &__title{
             width: 100%;
-            font-size: 28px;
+            font-size: $font-size-text-hight;
             font-weight: 600;
             line-height: 130%;
         }
         &__subtitle{
             width: 100%;
             font-weight: 300;
-            font-size: 18px;
+            font-size: $font-size-text-medium;
             line-height: 120%;
         }              
     }

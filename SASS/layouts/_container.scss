@@ -6,11 +6,10 @@
         flex-flow: row wrap;
         justify-content: center;
         gap: 10px;
-        width: 100%;
+        //width: 100%;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
         background-color: #f2f2f2;
-        z-index: 1;
         position:relative;
         background-clip: border-box;
         flex-basis: 100%;
@@ -23,13 +22,13 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'Shrikhand', cursive;
-    font-size: 15px;
+    font-size: $font-size-text-low;
     font-weight: 100;
     padding: 10px 20px 0px 20px;    
 }
 .section-title{
     &__homepage{
-        font-size: 28px;
+        font-size: $font-size-text-hight;
         font-weight: 600;
     }
     &__menu{
@@ -37,9 +36,8 @@
         font-family: Arial, Helvetica, sans-serif;
         text-transform: uppercase;
         font-weight: 300;
-        //color: darken($color: #f2f2f2f2, $amount: 70%);
-        color: darkgrey;
-        font-size: 18px;
+        color: darken($color: #f2f2f2f2, $amount: 70%);
+        font-size: $font-size-text-medium;
         border-block-end:solid $bg-color-newsflash-underline-check-menu 3px ;
         padding-bottom: 5px;
         display: flex;
@@ -54,8 +52,8 @@
     padding: 40px 20px;  
 }
  .bloc__menu{
-    display:flex;
-    flex-flow: row;
+    //display:flex;
+    //flex-flow: row;
     width: 100%;
  }
 .animated-menu{
@@ -74,9 +72,17 @@
     z-index: 2;
     background-color: #ffffff;    
 }
-.card__menu{
+.restaurant__Heading{
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: space-between; 
+}
+.menu-list{
     //max-width: 100%;
-    height:70px;
+    height:60px;
     display: flex;
     @include border-shadow-radius;
     margin: 5px 0px;
@@ -87,17 +93,13 @@
     overflow: hidden;
     cursor: pointer; 
 }
-
 .price{ 
     align-self: flex-end;
     margin:10px;
-    font-size: 15px; 
+    font-size: $font-size-text-low;
     font-weight: 500; 
-}
- 
+} 
 .presentation__menu{
-    //max-width: 260px;
-    //min-width: 130px;
     display: flex;
     flex: 1;
     flex-flow: column nowrap;
@@ -108,7 +110,7 @@
     white-space: nowrap;
 }
 .card-title{
-    font-size: 18px;
+    font-size: $font-size-text-medium;
     font-weight: 500;
     margin-block-end: 0px;
     margin-block-start: 0px;
@@ -117,7 +119,7 @@
 .card-subtitle{
     margin-block-end: 0px;
     margin-block-start: 0px;
-    font-size: 15px;
+    font-size: $font-size-text-low;
     color: lighten($color: #000000, $amount: 30%);
     text-overflow: ellipsis;
 }
@@ -128,12 +130,5 @@
     image-rendering: crisp-edges;
     object-fit:cover;    
 }
-.restaurant__Heading{
-    height: 50px;
-    padding: 10px;
-    display: flex;
-    flex-flow:row wrap;
-    align-items: center;
-    justify-content: space-between; 
-}
+
 

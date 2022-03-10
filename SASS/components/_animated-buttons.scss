@@ -5,7 +5,7 @@
 }
 .empty-heart{
     z-index: 1;
-    font-size: 25px;
+    font-size: $font-size-icon;
     transition: color 500ms;
     &:hover{
         color: transparent;
@@ -55,11 +55,11 @@
     background-color:transparent ;
     background-clip: text; 
     -webkit-background-clip: text;
-    font-size: 25px;
+    font-size: $font-size-icon;
 } 
-.card__menu:hover .check{
+.menu-list:hover .check{
     width: 70px;
 }
-.card__menu:hover .check .fa-check-circle  {
+.menu-list:hover .check .fa-check-circle  {
     transform: rotate(360deg); 
  }

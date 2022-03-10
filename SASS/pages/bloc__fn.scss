@@ -1,15 +1,15 @@
-.bloc__fct{
+.bloc__fn{
     background-color: #ffffff;
     padding: 25px 15px 50px 15px;
 }
-.fct__step{
+.fn__step{
     width: 100%;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: $font-size-text-medium;
 }
-.i-fct{
+.fn__i{
     color:$color-functional-icon;    
     padding-left: 30px;
 }
@@ -23,10 +23,10 @@
     color: #ffffff;
     background: $color-functional-icon;
     font-weight: 400;
-    font-size: 15px;
+    font-size: $font-size-text-low;
     text-align: center;    
 }
-.btn__fct{
+.btn__fn{
     cursor: pointer;
     width: 100%;
     display: flex;
@@ -40,6 +40,6 @@
     padding: 10px 0px;
     z-index: 1;
 }
-.btn__fct:hover{
+.btn__fn:hover{
     background-color:lighten($color: #9356DC, $amount: 35%) ;
 }

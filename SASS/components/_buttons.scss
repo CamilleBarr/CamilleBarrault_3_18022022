@@ -1,15 +1,8 @@
-.main-btn__explore{
-    @include main-button;           
-    padding: 18px 15px;
-    margin: 20px 0px;
-}
-.main-btn__order{
-    @include main-button;
-    padding: 15px 30px; 
-    margin: 40px 0px;    
+.main-btn__explore, .main-btn__order{
+    @include main-button;  
 }
 .btn-return{
-    font-size: 20px;
+    font-size: $font-size-icon;
     position: absolute;
     left: 20px;
     &--hidden{
@@ -21,22 +14,15 @@
     margin-left: 65%; 
     padding: 5px 7px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: $font-size-newsflash;
     position: absolute;
     z-index: 1;
-    &__1{
+    &--new{
         display: inline-flex;
         @include newsflash-new;
     }
-    &__2{
+    &--sale{
         display: inline-flex;
-        @include newsflash-new;
-    }
-    &__3{
-        display: none;
-        
-    }  
-    &__4{
-        display: none;
-    }                             
+        @include newsflash-sales;
+    }                     
 }

@@ -4,8 +4,10 @@
     border-radius: 20px;
 }
 @mixin main-button{
-    font-size: 120%;
+    font-size: $font-size-text-medium;
     border-radius: 70px;
+    padding: 15px 30px; 
+    margin: 40px 0px;
     box-shadow: 2px 4px 5px #cec3db ;
     border-style: none;        
     background: linear-gradient(to bottom right,#ff79da, #9356DC);
