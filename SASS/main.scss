@@ -8,11 +8,10 @@
 @import "./layouts/_footer.scss";
 @import "./layouts/_header.scss";
 @import "./layouts/_container.scss";
-@import "./pages/_bloc-fn.scss";
-@import "./pages/_bloc-form.scss";
+@import "./pages/_menu.scss";
+@import "./pages/_search-results.scss";
 
 @media all and (min-device-width: 768px){
-
     .main{
         display: flex;
         flex-flow: row wrap;
@@ -39,7 +38,6 @@
         flex: 3;
         background-color: #ffffff;
         padding: 20px;
-
     }
     .all_cards{
         display: flex;
@@ -57,8 +55,7 @@
         //     }
     .newsflash{
         margin-top: 1%;
-        margin-left: 20%;
-        
+        margin-left: 20%;        
     }
     .main__title{
         padding: 10px 100px 0px 100px ;
