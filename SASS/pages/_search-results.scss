@@ -87,7 +87,7 @@
 .card{
     display: flex;
     flex-flow: column wrap;
-    height:280px;
+    //height:280px;//
     @include border-shadow-radius;
     margin: 15px 0px; 
     z-index: 2;
