@@ -10,14 +10,12 @@
 @import "./layouts/_container.scss";
 @import "./pages/_menu.scss";
 @import "./pages/_search-results.scss";
-
-@media all and (min-device-width: 768px){
+@media all and (min-width: 768px){
     .main{
         display: flex;
         flex-flow: row wrap;
     }
     .bloc__menu{
-    //    width: 80%;
         max-width: 30%;
         flex-flow: column wrap;
     }
@@ -49,10 +47,6 @@
         width: 45%;
         margin:5px;
     }
-    //.card__menu{
-        //         max-width: 100%;
-        //         margin: 5px;
-        //     }
     .newsflash{
         margin-top: 1%;
         margin-left: 20%;        

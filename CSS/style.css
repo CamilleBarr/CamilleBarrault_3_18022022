@@ -10,7 +10,6 @@ a {
   color: inherit;
 }
 
-/* select menu dans accueil et select plat dans menu */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -295,6 +294,8 @@ a {
   margin-block-end: 0px;
   margin-block-start: 0px;
   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .card-subtitle {
@@ -303,6 +304,8 @@ a {
   font-size: 15px;
   color: #4d4d4d;
   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .restaurant__Img {
@@ -345,7 +348,6 @@ a {
   flex-flow: column nowrap;
   justify-content: space-between;
   margin: 10px;
-  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -472,7 +474,7 @@ a {
   justify-content: space-between;
 }
 
-@media all and (min-device-width: 768px) {
+@media all and (min-width: 768px) {
   .main {
     display: flex;
     flex-flow: row wrap;
